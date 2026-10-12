@@ -2,460 +2,358 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eclipse Productions — VIP Event Entertainment</title>
-  <meta name="description" content="Eclipse Productions LLC. Premium DJ, sound, lighting, special FX, hora loca and media services for weddings, quinceañeras, corporate and private events. Atlanta, GA and beyond." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Eclipse Productions — The night, produced.</title>
+  <meta name="description" content="Eclipse Productions LLC. DJ, sound, lighting, special FX, hora loca and media for weddings, quinceañeras, sweet 16s and corporate events. Atlanta, GA and beyond." />
   <meta name="theme-color" content="#000000" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://eclipseproductionsllc.com/" />
-
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Eclipse Productions — VIP Event Entertainment" />
-  <meta property="og:description" content="We don't just play music. We produce the night. DJ · Sound · Lighting · FX · Hora Loca · Media." />
+  <meta property="og:title" content="Eclipse Productions — The night, produced." />
+  <meta property="og:description" content="DJ · Sound · Lighting · FX · Hora Loca · Media. One crew for the whole night." />
   <meta property="og:url" content="https://eclipseproductionsllc.com/" />
   <meta property="og:image" content="https://eclipseproductionsllc.com/og.jpg" />
-  <meta property="og:image:width" content="800" />
-  <meta property="og:image:height" content="420" />
   <meta name="twitter:card" content="summary_large_image" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Doto:ROND,wght@0..100,100..900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/src/style.css" />
-
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Eclipse Productions LLC",
-    "url": "https://eclipseproductionsllc.com",
-    "telephone": "+1-770-688-7959",
-    "email": "bookings@eclipseproductionsllc.com",
-    "description": "VIP event entertainment: DJ, sound, lighting, special FX, hora loca and media services.",
-    "areaServed": "Atlanta, GA",
-    "priceRange": "$$$"
-  }
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Eclipse Productions LLC","url":"https://eclipseproductionsllc.com","telephone":"+1-770-688-7959","email":"bookings@eclipseproductionsllc.com","areaServed":"Atlanta, GA","description":"VIP event entertainment: DJ, sound, lighting, special FX, hora loca and media services."}
   </script>
 </head>
 <body>
 
-  <!-- PRELOADER -->
-  <div class="preloader" aria-hidden="true">
-    <div class="preloader__mark">
-      <span class="preloader__sun"></span>
-      <span class="preloader__moon"></span>
-    </div>
-    <div class="preloader__count mono"><span data-count>000</span></div>
-    <div class="preloader__label mono">ECLIPSE PRODUCTIONS — LOADING</div>
-  </div>
-
-  <!-- CURSOR -->
-  <div class="cursor" aria-hidden="true">
-    <div class="cursor__dot"></div>
-    <div class="cursor__ring"></div>
-  </div>
-
-  <!-- NAV -->
-  <header class="nav" id="nav">
-    <a href="#top" class="nav__logo" data-scroll="#top" aria-label="Eclipse Productions home">
-      <svg class="nav__glyph" viewBox="0 0 40 40" width="28" height="28" aria-hidden="true">
-        <circle cx="20" cy="20" r="18" fill="currentColor"/>
-        <circle cx="27" cy="20" r="16" fill="var(--bg)"/>
-      </svg>
-      <span class="nav__word doto">ECLIPSE</span>
-      <span class="nav__sub mono">PRODUCTIONS</span>
+<!-- ───────── NAV ───────── -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__logo" data-scroll="#top" aria-label="Eclipse Productions">
+      <svg viewBox="0 0 40 40" width="20" height="20" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="currentColor"/><circle cx="27" cy="20" r="16" fill="#000"/></svg>
+      <span>Eclipse</span>
     </a>
-
-    <nav class="nav__links mono" aria-label="Primary">
-      <a href="#about" data-scroll="#about"><sup>01</sup>About</a>
-      <a href="#services" data-scroll="#services"><sup>02</sup>Services</a>
-      <a href="#media" data-scroll="#media"><sup>03</sup>Media</a>
-      <a href="#events" data-scroll="#events"><sup>04</sup>Events</a>
-      <a href="#reviews" data-scroll="#reviews"><sup>05</sup>Reviews</a>
-      <a href="#contact" data-scroll="#contact"><sup>06</sup>Contact</a>
-    </nav>
-
-    <a href="mailto:bookings@eclipseproductionsllc.com?subject=Booking%20inquiry" class="btn btn--red nav__cta">
-      <span class="btn__dot"></span>Book a date
-    </a>
-
-    <button class="nav__burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
-      <span></span><span></span>
-    </button>
-  </header>
-
-  <!-- MOBILE MENU -->
-  <div class="menu" id="menu" aria-hidden="true">
-    <nav class="menu__links doto">
-      <a href="#about" data-scroll="#about">About</a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#latest" data-scroll="#latest">Latest</a>
       <a href="#services" data-scroll="#services">Services</a>
       <a href="#media" data-scroll="#media">Media</a>
+      <a href="#packages" data-scroll="#packages">Packages</a>
       <a href="#events" data-scroll="#events">Events</a>
       <a href="#reviews" data-scroll="#reviews">Reviews</a>
       <a href="#contact" data-scroll="#contact">Contact</a>
     </nav>
-    <div class="menu__foot mono">
-      <a href="tel:+17706887959">(770) 688-7959</a>
-      <a href="mailto:bookings@eclipseproductionsllc.com">bookings@eclipseproductionsllc.com</a>
+    <div class="nav__right">
+      <a href="tel:+17706887959" class="nav__phone">(770) 688-7959</a>
+      <a href="mailto:bookings@eclipseproductionsllc.com?subject=Booking%20inquiry" class="pill pill--sm">Book</a>
+      <button class="nav__burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="menu" id="menu">
+    <a href="#latest" data-scroll="#latest">Latest</a>
+    <a href="#services" data-scroll="#services">Services</a>
+    <a href="#media" data-scroll="#media">Media</a>
+    <a href="#packages" data-scroll="#packages">Packages</a>
+    <a href="#events" data-scroll="#events">Events</a>
+    <a href="#reviews" data-scroll="#reviews">Reviews</a>
+    <a href="#contact" data-scroll="#contact">Contact</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ───────── HERO ───────── -->
+<section class="hero" id="hero">
+  <div class="hero__sticky">
+    <div class="hero__media">
+      <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="/seq/sound/poster.webp">
+        <source src="/video/sound-1080.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__shade"></div>
+    </div>
+    <div class="hero__copy">
+      <h1 class="hero__title">The night,<br />produced.</h1>
+      <p class="hero__sub">DJ. Sound. Lighting. FX. Media.<br class="br-m" /> One crew for the whole night.</p>
+      <div class="hero__cta">
+        <a href="mailto:bookings@eclipseproductionsllc.com?subject=Booking%20inquiry" class="pill">Book a date</a>
+        <a href="#services" data-scroll="#services" class="link-arrow">See how we do it</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── STORE INTRO ───────── -->
+<section class="intro" id="latest">
+  <div class="wrap wrap--wide intro__row">
+    <h2 class="intro__title"><span>Eclipse Productions.</span> The best way to book the night you're picturing.</h2>
+    <a href="tel:+17706887959" class="specialist">
+      <span class="specialist__avatar"><svg viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="18" fill="#fff"/><circle cx="27" cy="20" r="16" fill="#1d1d1f"/></svg></span>
+      <span class="specialist__text"><strong>Need help picking a package?</strong><br />Talk to a specialist. <span class="red">(770) 688-7959 ↗</span></span>
+    </a>
+  </div>
+
+  <div class="wrap wrap--wide carousel-head">
+    <h3 class="h-section"><span class="muted">The latest.</span> Take a look at what's new right now.</h3>
+  </div>
+
+  <div class="carousel" data-carousel>
+    <div class="carousel__track" data-lenis-prevent>
+      <a class="tile tile--card tile--dark" href="#media" data-scroll="#media">
+        <picture><img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80" srcset="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1600&q=80 1600w" sizes="(max-width:734px) 80vw, 405px" alt="" loading="lazy" /></picture>
+        <div class="tile__text"><span class="eyebrow eyebrow--red">New</span><h4>Eclipse Media</h4><p>Red carpet, photo, video and same-day reels.</p></div>
+      </a>
+      <a class="tile tile--card tile--dark" href="#fx" data-scroll="#fx">
+        <picture><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=80" alt="" loading="lazy" /></picture>
+        <div class="tile__text"><span class="eyebrow">Special FX</span><h4>Cold-spark fountains</h4><p>Indoor-safe. Unreal in photos.</p></div>
+      </a>
+      <a class="tile tile--card tile--dark" href="#packages" data-scroll="#packages">
+        <picture><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80" alt="" loading="lazy" /></picture>
+        <div class="tile__text"><span class="eyebrow">Stage &amp; Production</span><h4>LED dance floor</h4><p>Infinity floor. White, black or custom.</p></div>
+      </a>
+      <a class="tile tile--card tile--dark" href="#packages" data-scroll="#packages">
+        <picture><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1200&q=80" alt="" loading="lazy" /></picture>
+        <div class="tile__text"><span class="eyebrow">Booths</span><h4>360 video booth</h4><p>The clip everyone posts that night.</p></div>
+      </a>
+      <a class="tile tile--card tile--dark" href="#clouds" data-scroll="#clouds">
+        <picture><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=80" alt="" loading="lazy" /></picture>
+        <div class="tile__text"><span class="eyebrow">Signature moment</span><h4>Dancing on the clouds</h4><p>A first dance that floats.</p></div>
+      </a>
+      <a class="tile tile--card tile--dark" href="#packages" data-scroll="#packages">
+        <picture><img src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?auto=format&fit=crop&w=1200&q=80" alt="" loading="lazy" /></picture>
+        <div class="tile__text"><span class="eyebrow">Entertainment</span><h4>Hora Loca</h4><p>LED robot, botargas, performers.</p></div>
+      </a>
+    </div>
+    <div class="carousel__nav wrap wrap--wide">
+      <button class="carousel__btn" data-prev aria-label="Previous">‹</button>
+      <button class="carousel__btn" data-next aria-label="Next">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── CHAPTERS ───────── -->
+<section class="chapters" id="services">
+  <div class="wrap chapters__head">
+    <h2 class="h-display">Scroll to produce<br />the night.</h2>
+    <p class="lede">Every piece of the show, from one crew. Sound that fills the room, light that moves with the music, and the moments people pull their phones out for.</p>
+  </div>
+
+  <!-- 01 SOUND -->
+  <div class="chapter" id="sound" data-chapter data-seq="/seq/sound/" data-frames="120">
+    <div class="chapter__sticky">
+      <canvas class="chapter__canvas"></canvas>
+      <img class="chapter__poster" src="/seq/sound/poster.webp" alt="" />
+      <div class="chapter__copy">
+        <span class="eyebrow">Sound</span>
+        <h3>Concert-grade.<br />Room-tuned.</h3>
+        <p>Pro powered systems for intimate rooms. Premium line array for 200-plus guests. Subs you feel in your chest and wireless mics for every toast.</p>
+      </div>
     </div>
   </div>
 
-  <main id="top">
-
-    <!-- ═══════════════════ HERO ═══════════════════ -->
-    <section class="hero" id="hero">
-      <div class="hero__pin">
-        <div class="hero__video">
-          <video autoplay muted loop playsinline preload="metadata" poster="/brand/flyer-original.jpeg">
-            <source src="/video/hype-reel.mp4" type="video/mp4" />
-          </video>
-          <div class="hero__scan"></div>
-        </div>
-
-        <div class="hero__eclipse" aria-hidden="true">
-          <div class="eclipse__glow"></div>
-          <div class="eclipse__sun"></div>
-          <div class="eclipse__moon"></div>
-          <div class="eclipse__totality mono">TOTALITY — FULL PRODUCTION</div>
-        </div>
-
-        <div class="hero__content">
-          <div class="hero__eyebrow mono">
-            <span class="rec"></span> VIP EVENT ENTERTAINMENT · ATLANTA, GA
-          </div>
-          <h1 class="hero__title doto" aria-label="Eclipse Productions">
-            <span class="hero__line"><span class="hero__word" data-split>ECLIPSE</span></span>
-            <span class="hero__line hero__line--sub"><span class="hero__word" data-split>PRODUCTIONS</span></span>
-          </h1>
-          <p class="hero__tag">
-            We don't just play music.<br />We produce the night.
-          </p>
-        </div>
-
-        <div class="hero__meta mono">
-          <div class="hero__meta-item">
-            <span class="k">SCROLL</span>
-            <span class="hero__scroll-line"></span>
-          </div>
-          <div class="hero__meta-item hero__meta-item--c">
-            <span class="k">DJ · SOUND · LIGHT · FX · MEDIA</span>
-          </div>
-          <div class="hero__meta-item hero__meta-item--r">
-            <a href="tel:+17706887959">(770) 688-7959</a>
-          </div>
-        </div>
-
-        <div class="corner corner--tl">+</div>
-        <div class="corner corner--tr">+</div>
-        <div class="corner corner--bl">+</div>
-        <div class="corner corner--br">+</div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════ MARQUEE ═══════════════════ -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__track doto">
-        <span>WEDDINGS</span><i></i><span>QUINCEAÑERAS</span><i></i><span>SWEET 16</span><i></i><span>CORPORATE</span><i></i><span>RED CARPET</span><i></i><span>HORA LOCA</span><i></i><span>CONTENT</span><i></i><span>PRIVATE EVENTS</span><i></i>
-        <span>WEDDINGS</span><i></i><span>QUINCEAÑERAS</span><i></i><span>SWEET 16</span><i></i><span>CORPORATE</span><i></i><span>RED CARPET</span><i></i><span>HORA LOCA</span><i></i><span>CONTENT</span><i></i><span>PRIVATE EVENTS</span><i></i>
+  <!-- 02 LIGHTING -->
+  <div class="chapter" id="lighting" data-chapter data-proc="beams">
+    <div class="chapter__sticky">
+      <canvas class="chapter__canvas"></canvas>
+      <div class="chapter__copy chapter__copy--left">
+        <span class="eyebrow">Lighting</span>
+        <h3>Twelve beams.<br />One cue.</h3>
+        <p>LED moving heads, robotic sharpy beams, perimeter uplighting and lasers, programmed to the music and to your timeline.</p>
       </div>
     </div>
+  </div>
 
-    <!-- ═══════════════════ ABOUT / MANIFESTO ═══════════════════ -->
-    <section class="about section section--light" id="about" data-theme="light">
-      <div class="section__head">
-        <span class="eyebrow mono"><span class="eyebrow__n">01</span> ABOUT</span>
-        <span class="eyebrow mono eyebrow--r">EST. ATLANTA</span>
+  <!-- 03 FX -->
+  <div class="chapter" id="fx" data-chapter data-proc="sparks">
+    <div class="chapter__sticky">
+      <canvas class="chapter__canvas"></canvas>
+      <div class="chapter__copy">
+        <span class="eyebrow">Special FX</span>
+        <h3>Keep scrolling.<br />Light it up.</h3>
+        <p>Cold-spark fountains that are safe indoors, CO2 jets, confetti cannons and haze that makes every beam visible.</p>
       </div>
-
-      <p class="manifesto" data-words>
-        Sound that hits. Light that moves. Moments your family will replay for years. From the first dance to the hora loca, Eclipse turns a room into an event — bilingual, full-production, and dialed in to the last detail.
-      </p>
-
-      <div class="stats">
-        <div class="stat">
-          <span class="stat__n doto" data-counter="300">0</span><span class="stat__plus doto">+</span>
-          <span class="stat__l mono">EVENTS PRODUCED</span>
-        </div>
-        <div class="stat">
-          <span class="stat__n doto">EN</span><span class="stat__plus doto">/</span><span class="stat__n doto">ES</span>
-          <span class="stat__l mono">FULLY BILINGUAL</span>
-        </div>
-        <div class="stat">
-          <span class="stat__n doto" data-counter="100">0</span><span class="stat__plus doto">%</span>
-          <span class="stat__l mono">CUSTOM PRODUCTION</span>
-        </div>
-        <div class="stat">
-          <span class="stat__n doto">5.0</span>
-          <span class="stat__l mono">CLIENT RATING</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════ SERVICES (HORIZONTAL) ═══════════════════ -->
-    <section class="services section" id="services" data-theme="dark">
-      <div class="services__pin">
-        <div class="section__head services__head">
-          <span class="eyebrow mono"><span class="eyebrow__n">02</span> SERVICES</span>
-          <span class="eyebrow mono eyebrow--r"><span data-progress-label>01</span> / 07 — DRAG OR SCROLL</span>
-        </div>
-
-        <div class="services__track">
-          <article class="card card--intro">
-            <h2 class="card__big doto">The<br />whole<br />show.</h2>
-            <p class="card__lead">One crew. Every piece of the night. Pick a package or build your own — we quote it, we bring it, we run it.</p>
-            <span class="card__arrow doto">→</span>
-          </article>
-
-          <article class="card">
-            <span class="card__n doto">01</span>
-            <h3 class="card__t doto">DJ &amp; MC</h3>
-            <p class="card__d">Open-format, bilingual, and built to fill the floor.</p>
-            <ul class="card__list mono">
-              <li>Open-format DJ · EN / ES</li>
-              <li>Reggaetón · Banda · Hip-hop · House</li>
-              <li>Bilingual MC &amp; hype</li>
-              <li>Custom grand-entrance mixes</li>
-              <li>Ceremony &amp; cocktail-hour sound</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <span class="card__n doto">02</span>
-            <h3 class="card__t doto">Sound</h3>
-            <p class="card__d">Concert-grade coverage. Crisp highs, chest-hitting lows.</p>
-            <ul class="card__list mono">
-              <li>Pro powered systems</li>
-              <li>Premium line array · 200+ guests</li>
-              <li>Subwoofers</li>
-              <li>Wireless &amp; lavalier mics</li>
-              <li>Multi-zone / patio audio</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <span class="card__n doto">03</span>
-            <h3 class="card__t doto">Lighting</h3>
-            <p class="card__d">Beams, washes and color that move with the music.</p>
-            <ul class="card__list mono">
-              <li>Dance-floor wash</li>
-              <li>LED moving heads</li>
-              <li>Robotic sharpy beams</li>
-              <li>Perimeter uplighting</li>
-              <li>Laser show</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <span class="card__n doto">04</span>
-            <h3 class="card__t doto">Special FX</h3>
-            <p class="card__d">The moments people pull their phones out for.</p>
-            <ul class="card__list mono">
-              <li>Cold-spark fountains · indoor-safe</li>
-              <li>Dancing on the clouds</li>
-              <li>Haze</li>
-              <li>Confetti &amp; streamer cannons</li>
-              <li>CO2 jets</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <span class="card__n doto">05</span>
-            <h3 class="card__t doto">Hora Loca</h3>
-            <p class="card__d">The energy switch. Flip it and the room goes off.</p>
-            <ul class="card__list mono">
-              <li>Hora loca kits · LED props</li>
-              <li>LED robot</li>
-              <li>Botargas &amp; mascots</li>
-              <li>Stilt walkers &amp; performers</li>
-              <li>Mirror man</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <span class="card__n doto">06</span>
-            <h3 class="card__t doto">Booths &amp; Screens</h3>
-            <p class="card__d">Interactive, shareable, and made for the feed.</p>
-            <ul class="card__list mono">
-              <li>360 video booth</li>
-              <li>Mirror booth &amp; glam booth</li>
-              <li>LED video wall</li>
-              <li>LED dance floor</li>
-              <li>Slideshows &amp; social wall</li>
-            </ul>
-          </article>
-
-          <article class="card card--red" id="media">
-            <span class="card__n doto">07</span><span class="card__badge mono">NEW</span>
-            <h3 class="card__t doto">Eclipse Media</h3>
-            <p class="card__d">Content, coverage and red-carpet photography. The night, captured and cut for social.</p>
-            <ul class="card__list mono">
-              <li>Red carpet &amp; step-and-repeat</li>
-              <li>Event photo &amp; video</li>
-              <li>Same-day social reels</li>
-              <li>Content creation for brands</li>
-              <li>Drone coverage</li>
-            </ul>
-          </article>
-
-          <article class="card card--end">
-            <p class="card__big doto">Your<br />night.</p>
-            <a href="mailto:bookings@eclipseproductionsllc.com?subject=Booking%20inquiry" class="btn btn--white">
-              <span class="btn__dot"></span>Start a quote
-            </a>
-          </article>
-        </div>
-
-        <div class="services__bar"><span data-progress-bar></span></div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════ GALLERY FILMSTRIP ═══════════════════ -->
-    <section class="gallery section" data-theme="dark">
-      <div class="section__head">
-        <span class="eyebrow mono"><span class="eyebrow__n">03</span> THE PROOF</span>
-        <span class="eyebrow mono eyebrow--r">NIGHTS WE MADE UNFORGETTABLE</span>
-      </div>
-      <div class="film" data-film>
-        <figure class="film__f"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=80" alt="Wedding first dance" loading="lazy" /><figcaption class="mono">WEDDINGS</figcaption></figure>
-        <figure class="film__f film__f--tall"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80" alt="Confetti drop" loading="lazy" /><figcaption class="mono">CONFETTI</figcaption></figure>
-        <figure class="film__f"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80" alt="Packed dance floor" loading="lazy" /><figcaption class="mono">PACKED FLOORS</figcaption></figure>
-        <figure class="film__f film__f--tall"><img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=900&q=80" alt="DJ set" loading="lazy" /><figcaption class="mono">DJ SETS</figcaption></figure>
-        <figure class="film__f"><img src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?auto=format&fit=crop&w=1200&q=80" alt="Light show" loading="lazy" /><figcaption class="mono">LIGHT SHOWS</figcaption></figure>
-        <figure class="film__f film__f--tall"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=900&q=80" alt="Crowd energy" loading="lazy" /><figcaption class="mono">THE ENERGY</figcaption></figure>
-        <figure class="film__f"><img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=1200&q=80" alt="Stage beams" loading="lazy" /><figcaption class="mono">STAGE BEAMS</figcaption></figure>
-      </div>
-    </section>
-
-    <!-- ═══════════════════ EVENTS ═══════════════════ -->
-    <section class="events section section--light" id="events" data-theme="light">
-      <div class="section__head">
-        <span class="eyebrow mono"><span class="eyebrow__n">04</span> UPCOMING</span>
-        <span class="eyebrow mono eyebrow--r">2026 — 2027 SEASON</span>
-      </div>
-
-      <h2 class="section__title doto">Where we'll be.</h2>
-
-      <ul class="rows">
-        <li class="row" data-reveal>
-          <span class="row__date mono">OCT 24<em>2026</em></span>
-          <span class="row__name">Quinceañera de Valeria</span>
-          <span class="row__where mono">Marietta, GA</span>
-          <span class="row__tag mono row__tag--booked">BOOKED</span>
-        </li>
-        <li class="row" data-reveal>
-          <span class="row__date mono">NOV 07<em>2026</em></span>
-          <span class="row__name">Reyes &amp; Sofía — Wedding</span>
-          <span class="row__where mono">Alpharetta, GA</span>
-          <span class="row__tag mono row__tag--booked">BOOKED</span>
-        </li>
-        <li class="row" data-reveal>
-          <span class="row__date mono">NOV 21<em>2026</em></span>
-          <span class="row__name">Sweet 16 — Private Estate</span>
-          <span class="row__where mono">Duluth, GA</span>
-          <span class="row__tag mono row__tag--booked">BOOKED</span>
-        </li>
-        <li class="row" data-reveal>
-          <span class="row__date mono">DEC 12<em>2026</em></span>
-          <span class="row__name">Corporate Holiday Gala</span>
-          <span class="row__where mono">Downtown Atlanta</span>
-          <span class="row__tag mono row__tag--booked">BOOKED</span>
-        </li>
-        <li class="row" data-reveal>
-          <span class="row__date mono">DEC 31<em>2026</em></span>
-          <span class="row__name">New Year's Eve — Private Party</span>
-          <span class="row__where mono">Buckhead, Atlanta</span>
-          <span class="row__tag mono row__tag--limited">LIMITED</span>
-        </li>
-        <li class="row row--cta" data-reveal>
-          <span class="row__date mono">2027<em>OPEN</em></span>
-          <span class="row__name">Your date</span>
-          <span class="row__where mono">Anywhere you need us</span>
-          <a href="mailto:bookings@eclipseproductionsllc.com?subject=Date%20availability" class="row__tag mono row__tag--open">CHECK AVAILABILITY →</a>
-        </li>
-      </ul>
-    </section>
-
-    <!-- ═══════════════════ REVIEWS ═══════════════════ -->
-    <section class="reviews section" id="reviews" data-theme="dark">
-      <div class="section__head">
-        <span class="eyebrow mono"><span class="eyebrow__n">05</span> REVIEWS</span>
-        <span class="eyebrow mono eyebrow--r"><span class="rec"></span> 5.0 ON GOOGLE</span>
-      </div>
-
-      <div class="reviews__grid">
-        <blockquote class="review" data-reveal>
-          <div class="review__stars doto">●●●●●</div>
-          <p>The dance floor was packed all night. The spark fountains during our first dance were unreal.</p>
-          <footer class="mono"><strong>Maria &amp; Luis</strong> — Wedding</footer>
-        </blockquote>
-        <blockquote class="review" data-reveal>
-          <div class="review__stars doto">●●●●●</div>
-          <p>Best decision for my daughter's quinceañera. The hora loca had everyone on their feet.</p>
-          <footer class="mono"><strong>Familia Hernández</strong> — Quinceañera</footer>
-        </blockquote>
-        <blockquote class="review" data-reveal>
-          <div class="review__stars doto">●●●●●</div>
-          <p>Professional from the first call to the last song. Sound and lighting were flawless.</p>
-          <footer class="mono"><strong>Jasmine R.</strong> — Sweet 16</footer>
-        </blockquote>
-        <blockquote class="review" data-reveal>
-          <div class="review__stars doto">●●●●●</div>
-          <p>They handled our company gala like a concert. Clean sound, zero stress, and the photos were back the next morning.</p>
-          <footer class="mono"><strong>D. Patel</strong> — Corporate</footer>
-        </blockquote>
-      </div>
-    </section>
-
-    <!-- ═══════════════════ CONTACT ═══════════════════ -->
-    <section class="contact section" id="contact" data-theme="dark">
-      <div class="section__head">
-        <span class="eyebrow mono"><span class="eyebrow__n">06</span> CONTACT</span>
-        <span class="eyebrow mono eyebrow--r">RESPONSE WITHIN 24H</span>
-      </div>
-
-      <a href="mailto:bookings@eclipseproductionsllc.com?subject=Booking%20inquiry" class="contact__big doto" data-split-lines>
-        <span>LET'S</span>
-        <span>TALK<span class="red">.</span></span>
-      </a>
-
-      <div class="contact__grid">
-        <div class="contact__col">
-          <span class="k mono">CALL / TEXT</span>
-          <a href="tel:+17706887959" class="contact__link">(770) 688-7959</a>
-        </div>
-        <div class="contact__col">
-          <span class="k mono">EMAIL</span>
-          <a href="mailto:bookings@eclipseproductionsllc.com" class="contact__link contact__link--sm">bookings@eclipseproductionsllc.com</a>
-        </div>
-        <div class="contact__col">
-          <span class="k mono">BASED IN</span>
-          <span class="contact__link">Atlanta, GA</span>
-          <span class="mono muted">Travel available</span>
-        </div>
-        <div class="contact__col">
-          <span class="k mono">FOLLOW</span>
-          <div class="socials">
-            <a href="https://instagram.com/eclipseproductionsllc" target="_blank" rel="noopener" class="social">Instagram</a>
-            <a href="https://tiktok.com/@eclipseproductionsllc" target="_blank" rel="noopener" class="social">TikTok</a>
-            <a href="https://facebook.com/eclipseproductionsllc" target="_blank" rel="noopener" class="social">Facebook</a>
-            <a href="https://youtube.com/@eclipseproductionsllc" target="_blank" rel="noopener" class="social">YouTube</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ═══════════════════ FOOTER ═══════════════════ -->
-  <footer class="footer">
-    <div class="footer__mark doto">ECLIPSE</div>
-    <div class="footer__row mono">
-      <span>© <span data-year>2026</span> ECLIPSE PRODUCTIONS LLC</span>
-      <span>ATLANTA, GA</span>
-      <span>SISTER BRAND — <a href="https://sonidoeclipsellc.com" target="_blank" rel="noopener">SONIDO ECLIPSE</a></span>
-      <a href="#top" data-scroll="#top">BACK TO TOP ↑</a>
     </div>
-  </footer>
+  </div>
 
-  <script type="module" src="/src/main.js"></script>
+  <!-- 04 CLOUDS -->
+  <div class="chapter" id="clouds" data-chapter data-proc="fog">
+    <div class="chapter__sticky">
+      <canvas class="chapter__canvas"></canvas>
+      <div class="chapter__copy chapter__copy--left">
+        <span class="eyebrow">Signature moments</span>
+        <h3>Dancing<br />on the clouds.</h3>
+        <p>Low-lying fog for the first dance, the vals, the father-daughter moment. Add a spotlight and a spark finale and the room goes quiet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── BENTO ───────── -->
+<section class="bento-sec">
+  <div class="wrap wrap--wide">
+    <h2 class="h-section">Everything in the package.<br /><span class="muted">Nothing left to rent.</span></h2>
+    <div class="bento">
+      <div class="tile tile--img tile--span2" data-reveal>
+        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=1600&q=80" alt="" loading="lazy" />
+        <div class="tile__text"><h4>Gear that turns heads.</h4><p>Line array, moving heads, haze, sparks, mics, cables. Ours, maintained, and backed up on site.</p></div>
+      </div>
+      <div class="tile tile--text tile--black" data-reveal>
+        <span class="big">EN / ES</span>
+        <h4>Bilingual DJ &amp; MC.</h4><p>Reggaetón, banda, hip-hop, house, and the slow songs your tías asked for.</p>
+      </div>
+      <div class="tile tile--text" data-reveal>
+        <span class="big">7–8 h</span>
+        <h4>Base hours per package.</h4><p>Setup and teardown included. Overtime available on the night.</p>
+      </div>
+      <div class="tile tile--text" data-reveal>
+        <span class="big">01</span>
+        <h4>Custom entrance mix.</h4><p>Your grand entrance, edited to the second. First mix included.</p>
+      </div>
+      <div class="tile tile--text tile--black" data-reveal>
+        <span class="big">24/7</span>
+        <h4>On-site tech all night.</h4><p>Sound and lighting engineer at the event. Backup gear in the truck.</p>
+      </div>
+      <div class="tile tile--img tile--span2" data-reveal>
+        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1600&q=80" alt="" loading="lazy" />
+        <div class="tile__text"><h4>Screens, booths and floors.</h4><p>LED video wall, 360 booth, mirror booth, LED dance floor, social wall.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── MEDIA ───────── -->
+<section class="media" id="media">
+  <div class="wrap wrap--wide media__grid">
+    <div class="media__copy" data-reveal>
+      <span class="eyebrow eyebrow--red">New · Eclipse Media</span>
+      <h2 class="h-display">The night,<br />captured.</h2>
+      <p class="lede">Red carpet and step-and-repeat photography, event photo and video, same-day social reels, and content for brands. Shot by the crew that is already in the room.</p>
+      <a href="mailto:bookings@eclipseproductionsllc.com?subject=Eclipse%20Media%20inquiry" class="pill pill--white">Ask about media</a>
+    </div>
+    <div class="media__tiles">
+      <div class="tile tile--img tile--tall" data-reveal><img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80" alt="" loading="lazy" /><div class="tile__text"><h4>Red carpet</h4></div></div>
+      <div class="tile tile--img" data-reveal><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1200&q=80" alt="" loading="lazy" /><div class="tile__text"><h4>Photo &amp; video</h4></div></div>
+      <div class="tile tile--img" data-reveal><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=80" alt="" loading="lazy" /><div class="tile__text"><h4>Same-day reels</h4></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── EVENT TYPES ───────── -->
+<section class="types">
+  <div class="wrap wrap--wide carousel-head">
+    <h2 class="h-section"><span class="muted">Made for every kind of night.</span> Pick yours.</h2>
+  </div>
+  <div class="carousel" data-carousel>
+    <div class="carousel__track" data-lenis-prevent>
+      <div class="tile tile--type"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy" /><div class="tile__text"><h4>Weddings</h4><p>Ceremony to last dance.</p></div></div>
+      <div class="tile tile--type"><img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy" /><div class="tile__text"><h4>Quinceañeras</h4><p>Vals, baile sorpresa, hora loca.</p></div></div>
+      <div class="tile tile--type"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy" /><div class="tile__text"><h4>Sweet 16</h4><p>LED floor, 360 booth, neon.</p></div></div>
+      <div class="tile tile--type"><img src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy" /><div class="tile__text"><h4>Corporate</h4><p>Galas, launches, holiday parties.</p></div></div>
+      <div class="tile tile--type"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy" /><div class="tile__text"><h4>Private parties</h4><p>Birthdays, anniversaries, NYE.</p></div></div>
+    </div>
+    <div class="carousel__nav wrap wrap--wide">
+      <button class="carousel__btn" data-prev aria-label="Previous">‹</button>
+      <button class="carousel__btn" data-next aria-label="Next">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── PACKAGES ───────── -->
+<section class="packages" id="packages">
+  <div class="wrap wrap--wide">
+    <h2 class="h-section">Which package is right for you?</h2>
+    <p class="lede lede--c">Four tiers, each one built on the last. Or go fully custom. No prices online, just tell us the date and the room and we quote it.</p>
+    <div class="compare">
+      <div class="plan" data-reveal>
+        <h4>Bronze</h4><span class="plan__tag">The essentials</span>
+        <ul><li>Pro DJ + MC</li><li>Pro sound system</li><li>Dance-floor wash lighting</li><li>Wireless mics for toasts</li><li>Custom entrance mix</li><li>7 hours</li></ul>
+        <a href="mailto:bookings@eclipseproductionsllc.com?subject=Bronze%20package" class="link-arrow">Get a quote</a>
+      </div>
+      <div class="plan plan--popular" data-reveal>
+        <span class="plan__badge">Most popular</span>
+        <h4>Silver</h4><span class="plan__tag">Crowd favorite</span>
+        <ul><li>Everything in Bronze</li><li>LED moving heads</li><li>Haze + laser show</li><li>Cold-spark fountains</li><li>Dancing on the clouds</li><li>8 hours</li></ul>
+        <a href="mailto:bookings@eclipseproductionsllc.com?subject=Silver%20package" class="link-arrow">Get a quote</a>
+      </div>
+      <div class="plan" data-reveal>
+        <h4>Gold</h4><span class="plan__tag">The full show</span>
+        <ul><li>Everything in Silver</li><li>Premium line array</li><li>Robotic sharpy beams</li><li>Hora loca kit + LED robot</li><li>TVs for slideshow</li><li>8 hours</li></ul>
+        <a href="mailto:bookings@eclipseproductionsllc.com?subject=Gold%20package" class="link-arrow">Get a quote</a>
+      </div>
+      <div class="plan" data-reveal>
+        <h4>Platinum</h4><span class="plan__tag">No limits</span>
+        <ul><li>Everything in Gold</li><li>LED dance floor</li><li>LED video wall</li><li>Perimeter uplighting</li><li>Botargas + performers</li><li>Full custom production</li></ul>
+        <a href="mailto:bookings@eclipseproductionsllc.com?subject=Platinum%20package" class="link-arrow">Get a quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── REVIEWS ───────── -->
+<section class="reviews" id="reviews">
+  <div class="wrap wrap--wide carousel-head">
+    <h2 class="h-section"><span class="muted">Families love us.</span> 5.0 on Google.</h2>
+  </div>
+  <div class="carousel" data-carousel>
+    <div class="carousel__track" data-lenis-prevent>
+      <blockquote class="quote"><div class="stars">★★★★★</div><p>The dance floor was packed all night. The spark fountains during our first dance were unreal.</p><footer><strong>Maria &amp; Luis</strong> · Wedding</footer></blockquote>
+      <blockquote class="quote"><div class="stars">★★★★★</div><p>Best decision for my daughter's quinceañera. The hora loca had everyone on their feet.</p><footer><strong>Familia Hernández</strong> · Quinceañera</footer></blockquote>
+      <blockquote class="quote"><div class="stars">★★★★★</div><p>Professional from the first call to the last song. Sound and lighting were flawless.</p><footer><strong>Jasmine R.</strong> · Sweet 16</footer></blockquote>
+      <blockquote class="quote"><div class="stars">★★★★★</div><p>They ran our company gala like a concert. Clean sound, zero stress, photos back the next morning.</p><footer><strong>D. Patel</strong> · Corporate</footer></blockquote>
+    </div>
+    <div class="carousel__nav wrap wrap--wide">
+      <button class="carousel__btn" data-prev aria-label="Previous">‹</button>
+      <button class="carousel__btn" data-next aria-label="Next">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── EVENTS ───────── -->
+<section class="events" id="events">
+  <div class="wrap">
+    <h2 class="h-section">Where we'll be.</h2>
+    <ul class="rows">
+      <li class="row"><span class="row__date">Oct 24</span><span class="row__name">Quinceañera de Valeria</span><span class="row__where">Marietta, GA</span><span class="row__tag">Booked</span></li>
+      <li class="row"><span class="row__date">Nov 07</span><span class="row__name">Reyes &amp; Sofía — Wedding</span><span class="row__where">Alpharetta, GA</span><span class="row__tag">Booked</span></li>
+      <li class="row"><span class="row__date">Nov 21</span><span class="row__name">Sweet 16 — Private estate</span><span class="row__where">Duluth, GA</span><span class="row__tag">Booked</span></li>
+      <li class="row"><span class="row__date">Dec 12</span><span class="row__name">Corporate holiday gala</span><span class="row__where">Downtown Atlanta</span><span class="row__tag">Booked</span></li>
+      <li class="row"><span class="row__date">Dec 31</span><span class="row__name">New Year's Eve — Private</span><span class="row__where">Buckhead</span><span class="row__tag row__tag--red">Limited</span></li>
+      <li class="row row--cta"><span class="row__date">2027</span><span class="row__name">Your date</span><span class="row__where">Anywhere you need us</span><a href="mailto:bookings@eclipseproductionsllc.com?subject=Date%20availability" class="link-arrow">Check availability</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ───────── CONTACT ───────── -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2 class="h-display">Let's plan<br />your night.</h2>
+    <div class="contact__grid">
+      <div><span class="eyebrow">Call or text</span><a href="tel:+17706887959" class="contact__big">(770) 688-7959</a></div>
+      <div><span class="eyebrow">Email</span><a href="mailto:bookings@eclipseproductionsllc.com" class="contact__big contact__big--sm">bookings@eclipseproductionsllc.com</a></div>
+      <div><span class="eyebrow">Based in</span><span class="contact__big">Atlanta, GA</span><span class="muted">Travel available</span></div>
+      <div><span class="eyebrow">Follow</span>
+        <div class="socials">
+          <a href="https://instagram.com/eclipseproductionsllc" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://tiktok.com/@eclipseproductionsllc" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://facebook.com/eclipseproductionsllc" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://youtube.com/@eclipseproductionsllc" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__cols">
+      <div><h5>Services</h5><a href="#sound" data-scroll="#sound">Sound</a><a href="#lighting" data-scroll="#lighting">Lighting</a><a href="#fx" data-scroll="#fx">Special FX</a><a href="#clouds" data-scroll="#clouds">Signature moments</a><a href="#media" data-scroll="#media">Eclipse Media</a></div>
+      <div><h5>Events</h5><a href="#packages" data-scroll="#packages">Weddings</a><a href="#packages" data-scroll="#packages">Quinceañeras</a><a href="#packages" data-scroll="#packages">Sweet 16</a><a href="#packages" data-scroll="#packages">Corporate</a></div>
+      <div><h5>Company</h5><a href="#contact" data-scroll="#contact">Contact</a><a href="#reviews" data-scroll="#reviews">Reviews</a><a href="https://sonidoeclipsellc.com" target="_blank" rel="noopener">Sonido Eclipse ↗</a></div>
+    </div>
+    <div class="footer__legal">
+      <span>Copyright © <span data-year>2026</span> Eclipse Productions LLC. All rights reserved.</span>
+      <span>Atlanta, GA · (770) 688-7959</span>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="/src/main.js"></script>
 </body>
 </html>
