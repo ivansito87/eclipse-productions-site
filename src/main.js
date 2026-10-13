@@ -361,9 +361,13 @@ if (!reduced) {
 $("[data-year]").textContent = new Date().getFullYear();
 const vid = $(".hero__video");
 if (vid?.dataset.src) {
-  fetch(vid.dataset.src, { method: "HEAD" }).then((r) => {
+  // phones get the portrait cut, everything else the 16:9 cut
+  const portrait = window.matchMedia("(max-width: 734px) and (orientation: portrait)").matches;
+  const src = portrait ? vid.dataset.src.replace("-1080", "-portrait") : vid.dataset.src;
+  if (portrait && vid.poster) vid.poster = vid.poster.replace("poster.webp", "poster-portrait.webp");
+  fetch(src, { method: "HEAD" }).then((r) => {
     if (!r.ok || !r.headers.get("content-type")?.startsWith("video")) return;
-    vid.src = vid.dataset.src;
+    vid.src = src;
     vid.play().catch(() => window.addEventListener("pointerdown", () => vid.play().catch(() => {}), { once: true }));
   }).catch(() => {});
 }
