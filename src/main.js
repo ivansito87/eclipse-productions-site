@@ -67,6 +67,56 @@ $$("[data-carousel]").forEach((c) => {
    (/seq/<name>/frame_###.webp) or a procedural renderer. Scroll progress 0→1 drives it. */
 
 const procedural = {
+  /* hanging line array: cabinets rim-lit, sound rings expanding as you scroll */
+  array(ctx, w, h, p, t) {
+    ctx.fillStyle = "#000";
+    ctx.fillRect(0, 0, w, h);
+    const cx = w * 0.5, top = h * 0.08;
+    const cab = Math.min(w, h) * 0.075;
+    const n = 8;
+    // rings
+    ctx.globalCompositeOperation = "lighter";
+    for (let i = 0; i < 9; i++) {
+      const k = (i / 9 + p * 1.2 + t * 0.02) % 1;
+      const r = k * w * 0.75 * (0.2 + p);
+      const a = (1 - k) * 0.35 * p;
+      ctx.strokeStyle = `rgba(255,255,255,${a})`;
+      ctx.lineWidth = 1 + (1 - k) * 2;
+      ctx.beginPath();
+      ctx.arc(cx, top + cab * n * 0.55, r, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+    ctx.globalCompositeOperation = "source-over";
+    // hoist line
+    ctx.strokeStyle = "#333";
+    ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(cx, 0); ctx.lineTo(cx, top); ctx.stroke();
+    // cabinets (slight J-curve)
+    for (let i = 0; i < n; i++) {
+      const y = top + i * cab * 1.04;
+      const tilt = (i / (n - 1)) * 0.18;
+      ctx.save();
+      ctx.translate(cx, y);
+      ctx.rotate(tilt);
+      const g = ctx.createLinearGradient(-cab * 1.6, 0, cab * 1.6, 0);
+      g.addColorStop(0, "#2a2a2c"); g.addColorStop(0.5, "#101012"); g.addColorStop(1, "#2a2a2c");
+      ctx.fillStyle = g;
+      ctx.fillRect(-cab * 1.6, 0, cab * 3.2, cab);
+      ctx.strokeStyle = `rgba(255,255,255,${0.25 + 0.5 * p * (0.5 + 0.5 * Math.sin(t * 6 + i))})`;
+      ctx.lineWidth = 1;
+      ctx.strokeRect(-cab * 1.6, 0, cab * 3.2, cab);
+      // grille dots
+      ctx.fillStyle = `rgba(255,255,255,${0.08 + 0.12 * p})`;
+      for (let gx = -cab * 1.4; gx < cab * 1.5; gx += cab * 0.22)
+        for (let gy = cab * 0.2; gy < cab * 0.9; gy += cab * 0.22) ctx.fillRect(gx, gy, 2, 2);
+      ctx.restore();
+    }
+    // floor glow
+    const fg = ctx.createRadialGradient(cx, h, 0, cx, h, w * 0.5);
+    fg.addColorStop(0, `rgba(255,255,255,${0.12 * p})`); fg.addColorStop(1, "rgba(255,255,255,0)");
+    ctx.fillStyle = fg; ctx.fillRect(0, h * 0.6, w, h * 0.4);
+  },
+
   /* 12 moving heads on a truss: straight down → fanned crown */
   beams(ctx, w, h, p, t) {
     ctx.fillStyle = "#000";
@@ -310,5 +360,11 @@ if (!reduced) {
 /* ───────────────── misc ───────────────── */
 $("[data-year]").textContent = new Date().getFullYear();
 const vid = $(".hero__video");
-vid?.play().catch(() => window.addEventListener("pointerdown", () => vid.play().catch(() => {}), { once: true }));
+if (vid?.dataset.src) {
+  fetch(vid.dataset.src, { method: "HEAD" }).then((r) => {
+    if (!r.ok || !r.headers.get("content-type")?.startsWith("video")) return;
+    vid.src = vid.dataset.src;
+    vid.play().catch(() => window.addEventListener("pointerdown", () => vid.play().catch(() => {}), { once: true }));
+  }).catch(() => {});
+}
 window.addEventListener("load", () => ScrollTrigger.refresh());

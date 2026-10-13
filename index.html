@@ -6,7 +6,7 @@
   <title>Eclipse Productions — The night, produced.</title>
   <meta name="description" content="Eclipse Productions LLC. DJ, sound, lighting, special FX, hora loca and media for weddings, quinceañeras, sweet 16s and corporate events. Atlanta, GA and beyond." />
   <meta name="theme-color" content="#000000" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.png" type="image/png" />
   <link rel="canonical" href="https://eclipseproductionsllc.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Eclipse Productions — The night, produced." />
@@ -28,8 +28,7 @@
 <header class="nav" id="nav">
   <div class="nav__inner">
     <a href="#top" class="nav__logo" data-scroll="#top" aria-label="Eclipse Productions">
-      <svg viewBox="0 0 40 40" width="20" height="20" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="currentColor"/><circle cx="27" cy="20" r="16" fill="#000"/></svg>
-      <span>Eclipse</span>
+      <img src="/brand/EP_watermark_360w.png" width="360" height="101" alt="Eclipse Productions" />
     </a>
     <nav class="nav__links" aria-label="Primary">
       <a href="#latest" data-scroll="#latest">Latest</a>
@@ -63,13 +62,12 @@
 <section class="hero" id="hero">
   <div class="hero__sticky">
     <div class="hero__media">
-      <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="/seq/sound/poster.webp">
-        <source src="/video/sound-1080.mp4" type="video/mp4" />
-      </video>
+      <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="/seq/hero-reel/poster.webp" data-src="/video/hero-reel-1080.mp4"></video>
       <div class="hero__shade"></div>
     </div>
     <div class="hero__copy">
-      <h1 class="hero__title">The night,<br />produced.</h1>
+      <img class="hero__logo" src="/brand/EP_logo_chrome_transparent_tight.png" width="1473" height="414" alt="Eclipse Productions" fetchpriority="high" />
+      <h1 class="hero__title">The night, produced.</h1>
       <p class="hero__sub">DJ. Sound. Lighting. FX. Media.<br class="br-m" /> One crew for the whole night.</p>
       <div class="hero__cta">
         <a href="mailto:bookings@eclipseproductionsllc.com?subject=Booking%20inquiry" class="pill">Book a date</a>
@@ -84,7 +82,7 @@
   <div class="wrap wrap--wide intro__row">
     <h2 class="intro__title"><span>Eclipse Productions.</span> The best way to book the night you're picturing.</h2>
     <a href="tel:+17706887959" class="specialist">
-      <span class="specialist__avatar"><svg viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="18" fill="#fff"/><circle cx="27" cy="20" r="16" fill="#1d1d1f"/></svg></span>
+      <span class="specialist__avatar"><img src="/brand/EP_avatar_E_1080_black.png" width="44" height="44" alt="" /></span>
       <span class="specialist__text"><strong>Need help picking a package?</strong><br />Talk to a specialist. <span class="red">(770) 688-7959 ↗</span></span>
     </a>
   </div>
@@ -135,10 +133,9 @@
   </div>
 
   <!-- 01 SOUND -->
-  <div class="chapter" id="sound" data-chapter data-seq="/seq/sound/" data-frames="120">
+  <div class="chapter" id="sound" data-chapter data-proc="array">
     <div class="chapter__sticky">
       <canvas class="chapter__canvas"></canvas>
-      <img class="chapter__poster" src="/seq/sound/poster.webp" alt="" />
       <div class="chapter__copy">
         <span class="eyebrow">Sound</span>
         <h3>Concert-grade.<br />Room-tuned.</h3>
@@ -342,6 +339,7 @@
 
 <footer class="footer">
   <div class="wrap">
+    <img class="footer__logo" src="/brand/EP_watermark_360w.png" width="180" height="51" alt="Eclipse Productions" loading="lazy" />
     <div class="footer__cols">
       <div><h5>Services</h5><a href="#sound" data-scroll="#sound">Sound</a><a href="#lighting" data-scroll="#lighting">Lighting</a><a href="#fx" data-scroll="#fx">Special FX</a><a href="#clouds" data-scroll="#clouds">Signature moments</a><a href="#media" data-scroll="#media">Eclipse Media</a></div>
       <div><h5>Events</h5><a href="#packages" data-scroll="#packages">Weddings</a><a href="#packages" data-scroll="#packages">Quinceañeras</a><a href="#packages" data-scroll="#packages">Sweet 16</a><a href="#packages" data-scroll="#packages">Corporate</a></div>
