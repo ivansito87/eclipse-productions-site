@@ -94,7 +94,7 @@ export const ES = {
   "form.t1": "Boda", "form.t2": "Quinceañera", "form.t3": "Sweet 16", "form.t4": "Corporativo", "form.t5": "Fiesta privada", "form.t6": "Otro",
   "form.interest": "Me interesa", "form.i0": "Aún no sé", "form.i6": "Producción a medida",
   "form.msg": "Cuéntanos de la noche", "form.msgph": "Salón, número de invitados, los momentos que importan.",
-  "form.send": "Enviar solicitud", "form.sending": "Enviando…", "form.ok": "¡Listo! Te respondemos en menos de 24 horas.", "form.err": "No se pudo enviar. Llámanos o mándanos texto al (770) 688-7959.",
+  "form.send": "Enviar solicitud", "form.sending": "Enviando…", "form.activate": "El formulario aún no está activado. Llámanos o mándanos texto al (770) 688-7959.", "form.ok": "¡Listo! Te respondemos en menos de 24 horas.", "form.err": "No se pudo enviar. Llámanos o mándanos texto al (770) 688-7959.",
   // footer
   s39: "Servicios", s40: "Eventos", s41: "Empresa",
   "foot.sound": "Sonido", "foot.light": "Iluminación", "foot.fx": "Efectos especiales", "foot.moments": "Momentos especiales",
@@ -104,6 +104,7 @@ export const ES = {
 
 export const EN_EXTRA = {
   "form.sending": "Sending…",
+  "form.activate": "The form isn't activated yet. Call or text us at (770) 688-7959.",
   "form.ok": "Got it. We'll reply within 24 hours.",
   "form.err": "Couldn't send. Call or text us at (770) 688-7959.",
   "foot.legal": "Copyright © {year} {legal}. All rights reserved.",

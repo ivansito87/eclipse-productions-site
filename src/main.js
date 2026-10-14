@@ -393,13 +393,14 @@ if (!reduced) {
         body: new FormData(form),
       });
       const data = await res.json().catch(() => ({}));
+      if (/activat/i.test(data.message || "")) throw new Error("activation");
       if (!res.ok || data.success === "false" || data.success === false) throw new Error(data.message || res.statusText);
       status.classList.add("is-ok");
       status.textContent = t("form.ok");
       form.reset();
     } catch (err) {
       status.classList.add("is-err");
-      status.textContent = t("form.err");
+      status.textContent = err.message === "activation" ? t("form.activate") : t("form.err");
     } finally {
       btn.disabled = false;
     }

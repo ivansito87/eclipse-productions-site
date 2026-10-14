@@ -279,6 +279,7 @@ button { font: inherit; }
 .field select { background-image: linear-gradient(45deg, transparent 50%, #8a8a8a 50%), linear-gradient(135deg, #8a8a8a 50%, transparent 50%); background-position: calc(100% - 20px) 50%, calc(100% - 15px) 50%; background-size: 5px 5px; background-repeat: no-repeat; padding-right: 36px; }
 .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--red); }
 .field textarea { resize: vertical; min-height: 110px; }
+.field input:-webkit-autofill, .field input:-webkit-autofill:focus { -webkit-text-fill-color: #fff; -webkit-box-shadow: 0 0 0 1000px #000 inset; caret-color: #fff; }
 .form__honey { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; }
 .form__foot { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 4px; }
 .form__submit { border: 0; cursor: pointer; }
