@@ -1,12 +1,14 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
+import { initI18n, t } from "./i18n.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const $ = (s, c = document) => c.querySelector(s);
 const $$ = (s, c = document) => [...c.querySelectorAll(s)];
 const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+initI18n();
 
 /* ───────────────── smooth scroll ───────────────── */
 const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
@@ -43,6 +45,14 @@ if (!reduced) {
     .to(".hero__copy", { y: -80, opacity: 0, duration: 0.45 }, 0)
     .to(".hero__media", { scale: 0.86, borderRadius: 28, duration: 1 }, 0.1)
     .to(".hero__shade", { opacity: 0.4, duration: 1 }, 0.1);
+}
+
+/* scroll cue hides once the visitor has scrolled */
+{
+  const hero = $(".hero");
+  const onScroll = () => hero.classList.toggle("is-scrolled", window.scrollY > 40);
+  lenis.on("scroll", onScroll);
+  window.addEventListener("scroll", onScroll, { passive: true });
 }
 
 /* ───────────────── carousels ───────────────── */
@@ -357,8 +367,46 @@ if (!reduced) {
   $$("[data-reveal]").forEach((el) => io.observe(el));
 }
 
+/* ───────────────── contact form (FormSubmit AJAX, no backend to run) ───────────────── */
+{
+  const form = $("#contact-form");
+  const status = $(".form__status", form);
+  const btn = $(".form__submit", form);
+  // "Get a quote" / "Ask about media" preselect the interest
+  $$("[data-interest]").forEach((a) =>
+    a.addEventListener("click", () => {
+      const sel = $("#form-interest");
+      const opt = [...sel.options].find((o) => o.value === a.dataset.interest);
+      if (opt) sel.value = opt.value;
+    })
+  );
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+    btn.disabled = true;
+    status.className = "form__status";
+    status.textContent = t("form.sending");
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(form),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || data.success === "false" || data.success === false) throw new Error(data.message || res.statusText);
+      status.classList.add("is-ok");
+      status.textContent = t("form.ok");
+      form.reset();
+    } catch (err) {
+      status.classList.add("is-err");
+      status.textContent = t("form.err");
+    } finally {
+      btn.disabled = false;
+    }
+  });
+}
+
 /* ───────────────── misc ───────────────── */
-$("[data-year]").textContent = new Date().getFullYear();
 const vid = $(".hero__video");
 if (vid?.dataset.src) {
   // phones get the portrait cut, everything else the 16:9 cut

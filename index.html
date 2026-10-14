@@ -28,31 +28,32 @@
 <header class="nav" id="nav">
   <div class="nav__inner">
     <a href="#top" class="nav__logo" data-scroll="#top" aria-label="Eclipse Productions">
-      <img src="/brand/EP_watermark_360w.png" width="360" height="101" alt="Eclipse Productions" />
+      <img src="/brand/EP_watermark_360w.png" width="360" height="101" alt="Eclipse Productions" data-brand-mark />
     </a>
     <nav class="nav__links" aria-label="Primary">
-      <a href="#latest" data-scroll="#latest">Latest</a>
-      <a href="#services" data-scroll="#services">Services</a>
-      <a href="#media" data-scroll="#media">Media</a>
-      <a href="#packages" data-scroll="#packages">Packages</a>
-      <a href="#events" data-scroll="#events">Events</a>
-      <a href="#reviews" data-scroll="#reviews">Reviews</a>
-      <a href="#contact" data-scroll="#contact">Contact</a>
+      <a href="#latest" data-scroll="#latest" data-i18n="s144">Latest</a>
+      <a href="#services" data-scroll="#services" data-i18n="s145">Services</a>
+      <a href="#media" data-scroll="#media" data-i18n="s146">Media</a>
+      <a href="#packages" data-scroll="#packages" data-i18n="s147">Packages</a>
+      <a href="#events" data-scroll="#events" data-i18n="s148">Events</a>
+      <a href="#reviews" data-scroll="#reviews" data-i18n="s149">Reviews</a>
+      <a href="#contact" data-scroll="#contact" data-i18n="s150">Contact</a>
     </nav>
     <div class="nav__right">
+      <button type="button" class="nav__lang" data-lang-toggle aria-label="Cambiar a español">ES</button>
       <a href="tel:+17706887959" class="nav__phone">(770) 688-7959</a>
-      <a href="mailto:bookings@eclipseproductionsllc.com?subject=Booking%20inquiry" class="pill pill--sm">Book</a>
+      <a href="#contact" data-scroll="#contact" class="pill pill--sm" data-i18n="nav.book">Book</a>
       <button class="nav__burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
     </div>
   </div>
   <div class="menu" id="menu">
-    <a href="#latest" data-scroll="#latest">Latest</a>
-    <a href="#services" data-scroll="#services">Services</a>
-    <a href="#media" data-scroll="#media">Media</a>
-    <a href="#packages" data-scroll="#packages">Packages</a>
-    <a href="#events" data-scroll="#events">Events</a>
-    <a href="#reviews" data-scroll="#reviews">Reviews</a>
-    <a href="#contact" data-scroll="#contact">Contact</a>
+    <a href="#latest" data-scroll="#latest" data-i18n="s151">Latest</a>
+    <a href="#services" data-scroll="#services" data-i18n="s152">Services</a>
+    <a href="#media" data-scroll="#media" data-i18n="s153">Media</a>
+    <a href="#packages" data-scroll="#packages" data-i18n="s154">Packages</a>
+    <a href="#events" data-scroll="#events" data-i18n="s155">Events</a>
+    <a href="#reviews" data-scroll="#reviews" data-i18n="s156">Reviews</a>
+    <a href="#contact" data-scroll="#contact" data-i18n="s157">Contact</a>
   </div>
 </header>
 
@@ -66,56 +67,60 @@
       <div class="hero__shade"></div>
     </div>
     <div class="hero__copy">
-      <img class="hero__logo" src="/brand/EP_logo_chrome_transparent_tight.png" width="1473" height="414" alt="Eclipse Productions" fetchpriority="high" />
-      <h1 class="hero__title">The night, produced.</h1>
-      <p class="hero__sub">DJ. Sound. Lighting. FX. Media.<br class="br-m" /> One crew for the whole night.</p>
+      <img class="hero__logo" src="/brand/EP_logo_chrome_transparent_tight.png" width="1473" height="414" alt="Eclipse Productions" fetchpriority="high" data-brand-logo />
+      <h1 class="hero__title" data-i18n="s1">The night, produced.</h1>
+      <p class="hero__sub" data-i18n="s42">DJ. Sound. Lighting. FX. Media.<br class="br-m" /> One crew for the whole night.</p>
       <div class="hero__cta">
-        <a href="mailto:bookings@eclipseproductionsllc.com?subject=Booking%20inquiry" class="pill">Book a date</a>
-        <a href="#services" data-scroll="#services" class="link-arrow">See how we do it</a>
+        <a href="#contact" data-scroll="#contact" class="pill" data-i18n="hero.cta">Book a date</a>
+        <a href="#services" data-scroll="#services" class="link-arrow" data-i18n="hero.link">See how we do it</a>
       </div>
     </div>
+    <a href="#latest" data-scroll="#latest" class="scroll-cue" aria-label="Scroll down">
+      <span class="scroll-cue__label" data-i18n="hero.scroll">Scroll</span>
+      <span class="scroll-cue__mouse"><span></span></span>
+    </a>
   </div>
 </section>
 
 <!-- ───────── STORE INTRO ───────── -->
 <section class="intro" id="latest">
   <div class="wrap wrap--wide intro__row">
-    <h2 class="intro__title"><span>Eclipse Productions.</span> The best way to book the night you're picturing.</h2>
+    <h2 class="intro__title" data-i18n="s2"><span>Eclipse Productions.</span> The best way to book the night you're picturing.</h2>
     <a href="tel:+17706887959" class="specialist">
       <span class="specialist__avatar"><img src="/brand/EP_avatar_E_1080_black.png" width="44" height="44" alt="" /></span>
-      <span class="specialist__text"><strong>Need help picking a package?</strong><br />Talk to a specialist. <span class="red">(770) 688-7959 ↗</span></span>
+      <span class="specialist__text" data-i18n="specialist"><strong>Need help picking a package?</strong><br />Talk to a specialist. <span class="red">(770) 688-7959 ↗</span></span>
     </a>
   </div>
 
   <div class="wrap wrap--wide carousel-head">
-    <h3 class="h-section"><span class="muted">The latest.</span> Take a look at what's new right now.</h3>
+    <h3 class="h-section" data-i18n="s10"><span class="muted">The latest.</span> Take a look at what's new right now.</h3>
   </div>
 
   <div class="carousel" data-carousel>
     <div class="carousel__track" data-lenis-prevent>
       <a class="tile tile--card tile--dark" href="#media" data-scroll="#media">
         <picture><source type="image/avif" srcset="/img/red-carpet-480.avif 480w, /img/red-carpet-960.avif 960w, /img/red-carpet-1440.avif 1440w" sizes="(max-width:734px) 80vw, 405px" /><img src="/img/red-carpet-960.webp" srcset="/img/red-carpet-480.webp 480w, /img/red-carpet-960.webp 960w, /img/red-carpet-1440.webp 1440w" sizes="(max-width:734px) 80vw, 405px" alt="" loading="lazy" /></picture>
-        <div class="tile__text"><span class="eyebrow eyebrow--red">New</span><h4>Eclipse Media</h4><p>Red carpet, photo, video and same-day reels.</p></div>
+        <div class="tile__text"><span class="eyebrow eyebrow--red" data-i18n="s111">New</span><h4 data-i18n="s15">Eclipse Media</h4><p data-i18n="s43">Red carpet, photo, video and same-day reels.</p></div>
       </a>
       <a class="tile tile--card tile--dark" href="#fx" data-scroll="#fx">
         <picture><source type="image/avif" srcset="/img/sparks-on-480.avif 480w, /img/sparks-on-960.avif 960w, /img/sparks-on-1440.avif 1440w, /img/sparks-on-1920.avif 1920w, /img/sparks-on-2560.avif 2560w" sizes="(max-width:734px) 80vw, 405px" /><img src="/img/sparks-on-960.webp" srcset="/img/sparks-on-480.webp 480w, /img/sparks-on-960.webp 960w, /img/sparks-on-1440.webp 1440w, /img/sparks-on-1920.webp 1920w, /img/sparks-on-2560.webp 2560w" sizes="(max-width:734px) 80vw, 405px" alt="" loading="lazy" /></picture>
-        <div class="tile__text"><span class="eyebrow">Special FX</span><h4>Cold-spark fountains</h4><p>Indoor-safe. Unreal in photos.</p></div>
+        <div class="tile__text"><span class="eyebrow" data-i18n="s112">Special FX</span><h4 data-i18n="s16">Cold-spark fountains</h4><p data-i18n="s44">Indoor-safe. Unreal in photos.</p></div>
       </a>
       <a class="tile tile--card tile--dark" href="#packages" data-scroll="#packages">
         <picture><source type="image/avif" srcset="/img/led-dance-floor-480.avif 480w, /img/led-dance-floor-960.avif 960w, /img/led-dance-floor-1440.avif 1440w, /img/led-dance-floor-1920.avif 1920w, /img/led-dance-floor-2560.avif 2560w" sizes="(max-width:734px) 80vw, 405px" /><img src="/img/led-dance-floor-960.webp" srcset="/img/led-dance-floor-480.webp 480w, /img/led-dance-floor-960.webp 960w, /img/led-dance-floor-1440.webp 1440w, /img/led-dance-floor-1920.webp 1920w, /img/led-dance-floor-2560.webp 2560w" sizes="(max-width:734px) 80vw, 405px" alt="" loading="lazy" /></picture>
-        <div class="tile__text"><span class="eyebrow">Stage &amp; Production</span><h4>LED dance floor</h4><p>Infinity floor. White, black or custom.</p></div>
+        <div class="tile__text"><span class="eyebrow" data-i18n="s113">Stage &amp; Production</span><h4 data-i18n="s17">LED dance floor</h4><p data-i18n="s45">Infinity floor. White, black or custom.</p></div>
       </a>
       <a class="tile tile--card tile--dark" href="#packages" data-scroll="#packages">
         <picture><source type="image/avif" srcset="/img/360-booth-480.avif 480w, /img/360-booth-960.avif 960w, /img/360-booth-1440.avif 1440w, /img/360-booth-1920.avif 1920w" sizes="(max-width:734px) 80vw, 405px" /><img src="/img/360-booth-960.webp" srcset="/img/360-booth-480.webp 480w, /img/360-booth-960.webp 960w, /img/360-booth-1440.webp 1440w, /img/360-booth-1920.webp 1920w" sizes="(max-width:734px) 80vw, 405px" alt="" loading="lazy" /></picture>
-        <div class="tile__text"><span class="eyebrow">Booths</span><h4>360 video booth</h4><p>The clip everyone posts that night.</p></div>
+        <div class="tile__text"><span class="eyebrow" data-i18n="s114">Booths</span><h4 data-i18n="s18">360 video booth</h4><p data-i18n="s46">The clip everyone posts that night.</p></div>
       </a>
       <a class="tile tile--card tile--dark" href="#clouds" data-scroll="#clouds">
         <picture><source type="image/avif" srcset="/img/clouds-full-480.avif 480w, /img/clouds-full-960.avif 960w, /img/clouds-full-1440.avif 1440w, /img/clouds-full-1920.avif 1920w, /img/clouds-full-2560.avif 2560w" sizes="(max-width:734px) 80vw, 405px" /><img src="/img/clouds-full-960.webp" srcset="/img/clouds-full-480.webp 480w, /img/clouds-full-960.webp 960w, /img/clouds-full-1440.webp 1440w, /img/clouds-full-1920.webp 1920w, /img/clouds-full-2560.webp 2560w" sizes="(max-width:734px) 80vw, 405px" alt="" loading="lazy" /></picture>
-        <div class="tile__text"><span class="eyebrow">Signature moment</span><h4>Dancing on the clouds</h4><p>A first dance that floats.</p></div>
+        <div class="tile__text"><span class="eyebrow" data-i18n="s115">Signature moment</span><h4 data-i18n="s19">Dancing on the clouds</h4><p data-i18n="s47">A first dance that floats.</p></div>
       </a>
       <a class="tile tile--card tile--dark" href="#packages" data-scroll="#packages">
         <picture><source type="image/avif" srcset="/img/hora-loca-480.avif 480w, /img/hora-loca-960.avif 960w, /img/hora-loca-1440.avif 1440w" sizes="(max-width:734px) 80vw, 405px" /><img src="/img/hora-loca-960.webp" srcset="/img/hora-loca-480.webp 480w, /img/hora-loca-960.webp 960w, /img/hora-loca-1440.webp 1440w" sizes="(max-width:734px) 80vw, 405px" alt="" loading="lazy" /></picture>
-        <div class="tile__text"><span class="eyebrow">Entertainment</span><h4>Hora Loca</h4><p>LED robot, botargas, performers.</p></div>
+        <div class="tile__text"><span class="eyebrow" data-i18n="s116">Entertainment</span><h4 data-i18n="s20">Hora Loca</h4><p data-i18n="s48">LED robot, botargas, performers.</p></div>
       </a>
     </div>
     <div class="carousel__nav wrap wrap--wide">
@@ -128,8 +133,8 @@
 <!-- ───────── CHAPTERS ───────── -->
 <section class="chapters" id="services">
   <div class="wrap chapters__head">
-    <h2 class="h-display">Scroll to produce<br />the night.</h2>
-    <p class="lede">Every piece of the show, from one crew. Sound that fills the room, light that moves with the music, and the moments people pull their phones out for.</p>
+    <h2 class="h-display" data-i18n="s3">Scroll to produce<br />the night.</h2>
+    <p class="lede" data-i18n="s49">Every piece of the show, from one crew. Sound that fills the room, light that moves with the music, and the moments people pull their phones out for.</p>
   </div>
 
   <!-- 01 SOUND -->
@@ -138,9 +143,9 @@
       <canvas class="chapter__canvas"></canvas>
       <img class="chapter__poster" src="/seq/line-array-orbit/poster.webp" alt="" />
       <div class="chapter__copy">
-        <span class="eyebrow">Sound</span>
-        <h3>Concert-grade.<br />Room-tuned.</h3>
-        <p>Pro powered systems for intimate rooms. Premium line array for 200-plus guests. Subs you feel in your chest and wireless mics for every toast.</p>
+        <span class="eyebrow" data-i18n="s117">Sound</span>
+        <h3 data-i18n="s11">Concert-grade.<br />Room-tuned.</h3>
+        <p data-i18n="s50">Pro powered systems for intimate rooms. Premium line array for 200-plus guests. Subs you feel in your chest and wireless mics for every toast.</p>
       </div>
     </div>
   </div>
@@ -151,9 +156,9 @@
       <canvas class="chapter__canvas"></canvas>
       <img class="chapter__poster" src="/seq/beams-sweep/poster.webp" alt="" />
       <div class="chapter__copy chapter__copy--left">
-        <span class="eyebrow">Lighting</span>
-        <h3>Every beam.<br />One cue.</h3>
-        <p>LED moving heads, robotic sharpy beams, perimeter uplighting and lasers, programmed to the music and to your timeline.</p>
+        <span class="eyebrow" data-i18n="s118">Lighting</span>
+        <h3 data-i18n="s12">Every beam.<br />One cue.</h3>
+        <p data-i18n="s51">LED moving heads, robotic sharpy beams, perimeter uplighting and lasers, programmed to the music and to your timeline.</p>
       </div>
     </div>
   </div>
@@ -164,9 +169,9 @@
       <canvas class="chapter__canvas"></canvas>
       <img class="chapter__poster" src="/seq/sparks-ignite/poster.webp" alt="" />
       <div class="chapter__copy">
-        <span class="eyebrow">Special FX</span>
-        <h3>Keep scrolling.<br />Light it up.</h3>
-        <p>Cold-spark fountains that are safe indoors, CO2 jets, confetti cannons and haze that makes every beam visible.</p>
+        <span class="eyebrow" data-i18n="s119">Special FX</span>
+        <h3 data-i18n="s13">Keep scrolling.<br />Light it up.</h3>
+        <p data-i18n="s52">Cold-spark fountains that are safe indoors, CO2 jets, confetti cannons and haze that makes every beam visible.</p>
       </div>
     </div>
   </div>
@@ -177,9 +182,9 @@
       <canvas class="chapter__canvas"></canvas>
       <img class="chapter__poster" src="/seq/clouds-rise/poster.webp" alt="" />
       <div class="chapter__copy chapter__copy--left">
-        <span class="eyebrow">Signature moments</span>
-        <h3>Dancing<br />on the clouds.</h3>
-        <p>Low-lying fog for the first dance, the vals, the father-daughter moment. Add a spotlight and a spark finale and the room goes quiet.</p>
+        <span class="eyebrow" data-i18n="s120">Signature moments</span>
+        <h3 data-i18n="s14">Dancing<br />on the clouds.</h3>
+        <p data-i18n="s53">Low-lying fog for the first dance, the vals, the father-daughter moment. Add a spotlight and a spark finale and the room goes quiet.</p>
       </div>
     </div>
   </div>
@@ -188,31 +193,31 @@
 <!-- ───────── BENTO ───────── -->
 <section class="bento-sec">
   <div class="wrap wrap--wide">
-    <h2 class="h-section">Everything in the package.<br /><span class="muted">Nothing left to rent.</span></h2>
+    <h2 class="h-section" data-i18n="s4">Everything in the package.<br /><span class="muted">Nothing left to rent.</span></h2>
     <div class="bento">
       <div class="tile tile--img tile--span2" data-reveal>
         <picture><source type="image/avif" srcset="/img/line-array-480.avif 480w, /img/line-array-960.avif 960w, /img/line-array-1440.avif 1440w, /img/line-array-1920.avif 1920w, /img/line-array-2560.avif 2560w" sizes="(max-width:734px) 100vw, 720px" /><img src="/img/line-array-960.webp" srcset="/img/line-array-480.webp 480w, /img/line-array-960.webp 960w, /img/line-array-1440.webp 1440w, /img/line-array-1920.webp 1920w, /img/line-array-2560.webp 2560w" sizes="(max-width:734px) 100vw, 720px" alt="" loading="lazy" /></picture>
-        <div class="tile__text"><h4>Gear that turns heads.</h4><p>Line array, moving heads, haze, sparks, mics, cables. Ours, maintained, and backed up on site.</p></div>
+        <div class="tile__text"><h4 data-i18n="s21">Gear that turns heads.</h4><p data-i18n="s54">Line array, moving heads, haze, sparks, mics, cables. Ours, maintained, and backed up on site.</p></div>
       </div>
       <div class="tile tile--text tile--black" data-reveal>
         <span class="big">EN / ES</span>
-        <h4>Bilingual DJ &amp; MC.</h4><p>Reggaetón, banda, hip-hop, house, and the slow songs your tías asked for.</p>
+        <h4 data-i18n="s22">Bilingual DJ &amp; MC.</h4><p data-i18n="s55">Reggaetón, banda, hip-hop, house, and the slow songs your tías asked for.</p>
       </div>
       <div class="tile tile--text" data-reveal>
         <span class="big">7–8 h</span>
-        <h4>Base hours per package.</h4><p>Setup and teardown included. Overtime available on the night.</p>
+        <h4 data-i18n="s23">Base hours per package.</h4><p data-i18n="s56">Setup and teardown included. Overtime available on the night.</p>
       </div>
       <div class="tile tile--text" data-reveal>
         <span class="big">01</span>
-        <h4>Custom entrance mix.</h4><p>Your grand entrance, edited to the second. First mix included.</p>
+        <h4 data-i18n="s24">Custom entrance mix.</h4><p data-i18n="s57">Your grand entrance, edited to the second. First mix included.</p>
       </div>
       <div class="tile tile--text tile--black" data-reveal>
         <span class="big">24/7</span>
-        <h4>On-site tech all night.</h4><p>Sound and lighting engineer at the event. Backup gear in the truck.</p>
+        <h4 data-i18n="s25">On-site tech all night.</h4><p data-i18n="s58">Sound and lighting engineer at the event. Backup gear in the truck.</p>
       </div>
       <div class="tile tile--img tile--span2" data-reveal>
         <picture><source type="image/avif" srcset="/img/led-dance-floor-480.avif 480w, /img/led-dance-floor-960.avif 960w, /img/led-dance-floor-1440.avif 1440w, /img/led-dance-floor-1920.avif 1920w, /img/led-dance-floor-2560.avif 2560w" sizes="(max-width:734px) 100vw, 720px" /><img src="/img/led-dance-floor-960.webp" srcset="/img/led-dance-floor-480.webp 480w, /img/led-dance-floor-960.webp 960w, /img/led-dance-floor-1440.webp 1440w, /img/led-dance-floor-1920.webp 1920w, /img/led-dance-floor-2560.webp 2560w" sizes="(max-width:734px) 100vw, 720px" alt="" loading="lazy" /></picture>
-        <div class="tile__text"><h4>Screens, booths and floors.</h4><p>LED video wall, 360 booth, mirror booth, LED dance floor, social wall.</p></div>
+        <div class="tile__text"><h4 data-i18n="s26">Screens, booths and floors.</h4><p data-i18n="s59">LED video wall, 360 booth, mirror booth, LED dance floor, social wall.</p></div>
       </div>
     </div>
   </div>
@@ -222,15 +227,15 @@
 <section class="media" id="media">
   <div class="wrap wrap--wide media__grid">
     <div class="media__copy" data-reveal>
-      <span class="eyebrow eyebrow--red">New · Eclipse Media</span>
-      <h2 class="h-display">The night,<br />captured.</h2>
-      <p class="lede">Red carpet and step-and-repeat photography, event photo and video, same-day social reels, and content for brands. Shot by the crew that is already in the room.</p>
-      <a href="mailto:bookings@eclipseproductionsllc.com?subject=Eclipse%20Media%20inquiry" class="pill pill--white">Ask about media</a>
+      <span class="eyebrow eyebrow--red" data-i18n="s121">New · Eclipse Media</span>
+      <h2 class="h-display" data-i18n="s5">The night,<br />captured.</h2>
+      <p class="lede" data-i18n="s60">Red carpet and step-and-repeat photography, event photo and video, same-day social reels, and content for brands. Shot by the crew that is already in the room.</p>
+      <a href="#contact" data-scroll="#contact" data-interest="Eclipse Media" class="pill pill--white" data-i18n="media.cta">Ask about media</a>
     </div>
     <div class="media__tiles">
-      <div class="tile tile--img tile--tall" data-reveal><picture><source type="image/avif" srcset="/img/red-carpet-480.avif 480w, /img/red-carpet-960.avif 960w, /img/red-carpet-1440.avif 1440w" sizes="(max-width:734px) 100vw, 420px" /><img src="/img/red-carpet-960.webp" srcset="/img/red-carpet-480.webp 480w, /img/red-carpet-960.webp 960w, /img/red-carpet-1440.webp 1440w" sizes="(max-width:734px) 100vw, 420px" alt="" loading="lazy" /></picture><div class="tile__text"><h4>Red carpet</h4></div></div>
-      <div class="tile tile--img" data-reveal><picture><source type="image/avif" srcset="/img/crowd-hands-480.avif 480w, /img/crowd-hands-960.avif 960w, /img/crowd-hands-1440.avif 1440w, /img/crowd-hands-1920.avif 1920w, /img/crowd-hands-2560.avif 2560w" sizes="(max-width:734px) 100vw, 420px" /><img src="/img/crowd-hands-960.webp" srcset="/img/crowd-hands-480.webp 480w, /img/crowd-hands-960.webp 960w, /img/crowd-hands-1440.webp 1440w, /img/crowd-hands-1920.webp 1920w, /img/crowd-hands-2560.webp 2560w" sizes="(max-width:734px) 100vw, 420px" alt="" loading="lazy" /></picture><div class="tile__text"><h4>Photo &amp; video</h4></div></div>
-      <div class="tile tile--img" data-reveal><picture><source type="image/avif" srcset="/img/360-booth-480.avif 480w, /img/360-booth-960.avif 960w, /img/360-booth-1440.avif 1440w, /img/360-booth-1920.avif 1920w" sizes="(max-width:734px) 100vw, 420px" /><img src="/img/360-booth-960.webp" srcset="/img/360-booth-480.webp 480w, /img/360-booth-960.webp 960w, /img/360-booth-1440.webp 1440w, /img/360-booth-1920.webp 1920w" sizes="(max-width:734px) 100vw, 420px" alt="" loading="lazy" /></picture><div class="tile__text"><h4>Same-day reels</h4></div></div>
+      <div class="tile tile--img tile--tall" data-reveal><picture><source type="image/avif" srcset="/img/red-carpet-480.avif 480w, /img/red-carpet-960.avif 960w, /img/red-carpet-1440.avif 1440w" sizes="(max-width:734px) 100vw, 420px" /><img src="/img/red-carpet-960.webp" srcset="/img/red-carpet-480.webp 480w, /img/red-carpet-960.webp 960w, /img/red-carpet-1440.webp 1440w" sizes="(max-width:734px) 100vw, 420px" alt="" loading="lazy" /></picture><div class="tile__text"><h4 data-i18n="s27">Red carpet</h4></div></div>
+      <div class="tile tile--img" data-reveal><picture><source type="image/avif" srcset="/img/crowd-hands-480.avif 480w, /img/crowd-hands-960.avif 960w, /img/crowd-hands-1440.avif 1440w, /img/crowd-hands-1920.avif 1920w, /img/crowd-hands-2560.avif 2560w" sizes="(max-width:734px) 100vw, 420px" /><img src="/img/crowd-hands-960.webp" srcset="/img/crowd-hands-480.webp 480w, /img/crowd-hands-960.webp 960w, /img/crowd-hands-1440.webp 1440w, /img/crowd-hands-1920.webp 1920w, /img/crowd-hands-2560.webp 2560w" sizes="(max-width:734px) 100vw, 420px" alt="" loading="lazy" /></picture><div class="tile__text"><h4 data-i18n="s28">Photo &amp; video</h4></div></div>
+      <div class="tile tile--img" data-reveal><picture><source type="image/avif" srcset="/img/360-booth-480.avif 480w, /img/360-booth-960.avif 960w, /img/360-booth-1440.avif 1440w, /img/360-booth-1920.avif 1920w" sizes="(max-width:734px) 100vw, 420px" /><img src="/img/360-booth-960.webp" srcset="/img/360-booth-480.webp 480w, /img/360-booth-960.webp 960w, /img/360-booth-1440.webp 1440w, /img/360-booth-1920.webp 1920w" sizes="(max-width:734px) 100vw, 420px" alt="" loading="lazy" /></picture><div class="tile__text"><h4 data-i18n="s29">Same-day reels</h4></div></div>
     </div>
   </div>
 </section>
@@ -238,15 +243,15 @@
 <!-- ───────── EVENT TYPES ───────── -->
 <section class="types">
   <div class="wrap wrap--wide carousel-head">
-    <h2 class="h-section"><span class="muted">Made for every kind of night.</span> Pick yours.</h2>
+    <h2 class="h-section" data-i18n="s6"><span class="muted">Made for every kind of night.</span> Pick yours.</h2>
   </div>
   <div class="carousel" data-carousel>
     <div class="carousel__track" data-lenis-prevent>
-      <div class="tile tile--type"><picture><source type="image/avif" srcset="/img/uplighting-ballroom-480.avif 480w, /img/uplighting-ballroom-960.avif 960w, /img/uplighting-ballroom-1440.avif 1440w, /img/uplighting-ballroom-1920.avif 1920w, /img/uplighting-ballroom-2560.avif 2560w" sizes="(max-width:734px) 68vw, 300px" /><img src="/img/uplighting-ballroom-960.webp" srcset="/img/uplighting-ballroom-480.webp 480w, /img/uplighting-ballroom-960.webp 960w, /img/uplighting-ballroom-1440.webp 1440w, /img/uplighting-ballroom-1920.webp 1920w, /img/uplighting-ballroom-2560.webp 2560w" sizes="(max-width:734px) 68vw, 300px" alt="" loading="lazy" /></picture><div class="tile__text"><h4>Weddings</h4><p>Ceremony to last dance.</p></div></div>
-      <div class="tile tile--type"><picture><source type="image/avif" srcset="/img/quince-vals-480.avif 480w, /img/quince-vals-960.avif 960w, /img/quince-vals-1440.avif 1440w" sizes="(max-width:734px) 68vw, 300px" /><img src="/img/quince-vals-960.webp" srcset="/img/quince-vals-480.webp 480w, /img/quince-vals-960.webp 960w, /img/quince-vals-1440.webp 1440w" sizes="(max-width:734px) 68vw, 300px" alt="" loading="lazy" /></picture><div class="tile__text"><h4>Quinceañeras</h4><p>Vals, baile sorpresa, hora loca.</p></div></div>
-      <div class="tile tile--type"><picture><source type="image/avif" srcset="/img/sweet16-480.avif 480w, /img/sweet16-960.avif 960w, /img/sweet16-1440.avif 1440w" sizes="(max-width:734px) 68vw, 300px" /><img src="/img/sweet16-960.webp" srcset="/img/sweet16-480.webp 480w, /img/sweet16-960.webp 960w, /img/sweet16-1440.webp 1440w" sizes="(max-width:734px) 68vw, 300px" alt="" loading="lazy" /></picture><div class="tile__text"><h4>Sweet 16</h4><p>LED floor, 360 booth, neon.</p></div></div>
-      <div class="tile tile--type"><picture><source type="image/avif" srcset="/img/corporate-gala-480.avif 480w, /img/corporate-gala-960.avif 960w, /img/corporate-gala-1440.avif 1440w, /img/corporate-gala-1920.avif 1920w, /img/corporate-gala-2560.avif 2560w" sizes="(max-width:734px) 68vw, 300px" /><img src="/img/corporate-gala-960.webp" srcset="/img/corporate-gala-480.webp 480w, /img/corporate-gala-960.webp 960w, /img/corporate-gala-1440.webp 1440w, /img/corporate-gala-1920.webp 1920w, /img/corporate-gala-2560.webp 2560w" sizes="(max-width:734px) 68vw, 300px" alt="" loading="lazy" /></picture><div class="tile__text"><h4>Corporate</h4><p>Galas, launches, holiday parties.</p></div></div>
-      <div class="tile tile--type"><picture><source type="image/avif" srcset="/img/crowd-hands-480.avif 480w, /img/crowd-hands-960.avif 960w, /img/crowd-hands-1440.avif 1440w, /img/crowd-hands-1920.avif 1920w, /img/crowd-hands-2560.avif 2560w" sizes="(max-width:734px) 68vw, 300px" /><img src="/img/crowd-hands-960.webp" srcset="/img/crowd-hands-480.webp 480w, /img/crowd-hands-960.webp 960w, /img/crowd-hands-1440.webp 1440w, /img/crowd-hands-1920.webp 1920w, /img/crowd-hands-2560.webp 2560w" sizes="(max-width:734px) 68vw, 300px" alt="" loading="lazy" /></picture><div class="tile__text"><h4>Private parties</h4><p>Birthdays, anniversaries, NYE.</p></div></div>
+      <div class="tile tile--type"><picture><source type="image/avif" srcset="/img/uplighting-ballroom-480.avif 480w, /img/uplighting-ballroom-960.avif 960w, /img/uplighting-ballroom-1440.avif 1440w, /img/uplighting-ballroom-1920.avif 1920w, /img/uplighting-ballroom-2560.avif 2560w" sizes="(max-width:734px) 68vw, 300px" /><img src="/img/uplighting-ballroom-960.webp" srcset="/img/uplighting-ballroom-480.webp 480w, /img/uplighting-ballroom-960.webp 960w, /img/uplighting-ballroom-1440.webp 1440w, /img/uplighting-ballroom-1920.webp 1920w, /img/uplighting-ballroom-2560.webp 2560w" sizes="(max-width:734px) 68vw, 300px" alt="" loading="lazy" /></picture><div class="tile__text"><h4 data-i18n="s30">Weddings</h4><p data-i18n="s61">Ceremony to last dance.</p></div></div>
+      <div class="tile tile--type"><picture><source type="image/avif" srcset="/img/quince-vals-480.avif 480w, /img/quince-vals-960.avif 960w, /img/quince-vals-1440.avif 1440w" sizes="(max-width:734px) 68vw, 300px" /><img src="/img/quince-vals-960.webp" srcset="/img/quince-vals-480.webp 480w, /img/quince-vals-960.webp 960w, /img/quince-vals-1440.webp 1440w" sizes="(max-width:734px) 68vw, 300px" alt="" loading="lazy" /></picture><div class="tile__text"><h4 data-i18n="s31">Quinceañeras</h4><p data-i18n="s62">Vals, baile sorpresa, hora loca.</p></div></div>
+      <div class="tile tile--type"><picture><source type="image/avif" srcset="/img/sweet16-480.avif 480w, /img/sweet16-960.avif 960w, /img/sweet16-1440.avif 1440w" sizes="(max-width:734px) 68vw, 300px" /><img src="/img/sweet16-960.webp" srcset="/img/sweet16-480.webp 480w, /img/sweet16-960.webp 960w, /img/sweet16-1440.webp 1440w" sizes="(max-width:734px) 68vw, 300px" alt="" loading="lazy" /></picture><div class="tile__text"><h4 data-i18n="s32">Sweet 16</h4><p data-i18n="s63">LED floor, 360 booth, neon.</p></div></div>
+      <div class="tile tile--type"><picture><source type="image/avif" srcset="/img/corporate-gala-480.avif 480w, /img/corporate-gala-960.avif 960w, /img/corporate-gala-1440.avif 1440w, /img/corporate-gala-1920.avif 1920w, /img/corporate-gala-2560.avif 2560w" sizes="(max-width:734px) 68vw, 300px" /><img src="/img/corporate-gala-960.webp" srcset="/img/corporate-gala-480.webp 480w, /img/corporate-gala-960.webp 960w, /img/corporate-gala-1440.webp 1440w, /img/corporate-gala-1920.webp 1920w, /img/corporate-gala-2560.webp 2560w" sizes="(max-width:734px) 68vw, 300px" alt="" loading="lazy" /></picture><div class="tile__text"><h4 data-i18n="s33">Corporate</h4><p data-i18n="s64">Galas, launches, holiday parties.</p></div></div>
+      <div class="tile tile--type"><picture><source type="image/avif" srcset="/img/crowd-hands-480.avif 480w, /img/crowd-hands-960.avif 960w, /img/crowd-hands-1440.avif 1440w, /img/crowd-hands-1920.avif 1920w, /img/crowd-hands-2560.avif 2560w" sizes="(max-width:734px) 68vw, 300px" /><img src="/img/crowd-hands-960.webp" srcset="/img/crowd-hands-480.webp 480w, /img/crowd-hands-960.webp 960w, /img/crowd-hands-1440.webp 1440w, /img/crowd-hands-1920.webp 1920w, /img/crowd-hands-2560.webp 2560w" sizes="(max-width:734px) 68vw, 300px" alt="" loading="lazy" /></picture><div class="tile__text"><h4 data-i18n="s34">Private parties</h4><p data-i18n="s65">Birthdays, anniversaries, NYE.</p></div></div>
     </div>
     <div class="carousel__nav wrap wrap--wide">
       <button class="carousel__btn" data-prev aria-label="Previous">‹</button>
@@ -258,29 +263,29 @@
 <!-- ───────── PACKAGES ───────── -->
 <section class="packages" id="packages">
   <div class="wrap wrap--wide">
-    <h2 class="h-section">Which package is right for you?</h2>
-    <p class="lede lede--c">Four tiers, each one built on the last. Or go fully custom. No prices online, just tell us the date and the room and we quote it.</p>
+    <h2 class="h-section" data-i18n="s7">Which package is right for you?</h2>
+    <p class="lede lede--c" data-i18n="s66">Four tiers, each one built on the last. Or go fully custom. No prices online, just tell us the date and the room and we quote it.</p>
     <div class="compare">
       <div class="plan" data-reveal>
-        <h4>Bronze</h4><span class="plan__tag">The essentials</span>
-        <ul><li>Professional DJ</li><li>Custom mixes</li><li>Premium sound</li><li>Wireless microphones</li><li>Dance-floor illumination</li><li>Moving head lights</li><li>7-hour service</li></ul>
-        <a href="mailto:bookings@eclipseproductionsllc.com?subject=Bronze%20package" class="link-arrow">Get a quote</a>
+        <h4 data-i18n="s35">Bronze</h4><span class="plan__tag" data-i18n="s122">The essentials</span>
+        <ul><li data-i18n="s71">Professional DJ</li><li data-i18n="s72">Custom mixes</li><li data-i18n="s73">Premium sound</li><li data-i18n="s74">Wireless microphones</li><li data-i18n="s75">Dance-floor illumination</li><li data-i18n="s76">Moving head lights</li><li data-i18n="s77">7-hour service</li></ul>
+        <a href="#contact" data-scroll="#contact" data-interest="Bronze package" class="link-arrow" data-i18n="pkg.quote">Get a quote</a>
       </div>
       <div class="plan" data-reveal>
-        <h4>Silver</h4><span class="plan__tag">The signature moments</span>
-        <ul><li>Everything in Bronze</li><li>Premium line array sound</li><li>Master of ceremony</li><li>Cold-spark fountains</li><li>Dancing on the clouds</li><li>Production-level lighting + haze</li><li>Timeline &amp; planning meeting</li><li>8-hour service</li></ul>
-        <a href="mailto:bookings@eclipseproductionsllc.com?subject=Silver%20package" class="link-arrow">Get a quote</a>
+        <h4 data-i18n="s36">Silver</h4><span class="plan__tag" data-i18n="s123">The signature moments</span>
+        <ul><li data-i18n="s78">Everything in Bronze</li><li data-i18n="s79">Premium line array sound</li><li data-i18n="s80">Master of ceremony</li><li data-i18n="s81">Cold-spark fountains</li><li data-i18n="s82">Dancing on the clouds</li><li data-i18n="s83">Production-level lighting + haze</li><li data-i18n="s84">Timeline &amp; planning meeting</li><li data-i18n="s85">8-hour service</li></ul>
+        <a href="#contact" data-scroll="#contact" data-interest="Silver package" class="link-arrow" data-i18n="pkg.quote">Get a quote</a>
       </div>
       <div class="plan" data-reveal>
-        <h4>Gold</h4><span class="plan__tag">The full show</span>
-        <ul><li>Everything in Silver</li><li>2 portrait screens</li><li>Custom slideshow creation</li><li>Hora loca kit</li><li>LED robot or character of choice</li><li>8-hour service</li></ul>
-        <a href="mailto:bookings@eclipseproductionsllc.com?subject=Gold%20package" class="link-arrow">Get a quote</a>
+        <h4 data-i18n="s37">Gold</h4><span class="plan__tag" data-i18n="s124">The full show</span>
+        <ul><li data-i18n="s86">Everything in Silver</li><li data-i18n="s87">2 portrait screens</li><li data-i18n="s88">Custom slideshow creation</li><li data-i18n="s89">Hora loca kit</li><li data-i18n="s90">LED robot or character of choice</li><li data-i18n="s91">8-hour service</li></ul>
+        <a href="#contact" data-scroll="#contact" data-interest="Gold package" class="link-arrow" data-i18n="pkg.quote">Get a quote</a>
       </div>
       <div class="plan plan--popular" data-reveal>
-        <span class="plan__badge">Recommended</span>
-        <h4>Platinum</h4><span class="plan__tag">No limits</span>
-        <ul><li>Everything in Gold</li><li>Giant LED screen, configurable</li><li>LED dance floor of choice</li><li>Custom screen content</li><li>+1 special character</li><li>8-hour service</li></ul>
-        <a href="mailto:bookings@eclipseproductionsllc.com?subject=Platinum%20package" class="link-arrow">Get a quote</a>
+        <span class="plan__badge" data-i18n="s125">Recommended</span>
+        <h4 data-i18n="s38">Platinum</h4><span class="plan__tag" data-i18n="s126">No limits</span>
+        <ul><li data-i18n="s92">Everything in Gold</li><li data-i18n="s93">Giant LED screen, configurable</li><li data-i18n="s94">LED dance floor of choice</li><li data-i18n="s95">Custom screen content</li><li data-i18n="s96">+1 special character</li><li data-i18n="s97">8-hour service</li></ul>
+        <a href="#contact" data-scroll="#contact" data-interest="Platinum package" class="link-arrow" data-i18n="pkg.quote">Get a quote</a>
       </div>
     </div>
   </div>
@@ -289,14 +294,14 @@
 <!-- ───────── REVIEWS ───────── -->
 <section class="reviews" id="reviews">
   <div class="wrap wrap--wide carousel-head">
-    <h2 class="h-section"><span class="muted">Families love us.</span> 5.0 on Google.</h2>
+    <h2 class="h-section" data-i18n="s8"><span class="muted">Families love us.</span> 5.0 on Google.</h2>
   </div>
   <div class="carousel" data-carousel>
     <div class="carousel__track" data-lenis-prevent>
-      <blockquote class="quote"><div class="stars">★★★★★</div><p>The dance floor was packed all night. The spark fountains during our first dance were unreal.</p><footer><strong>Maria &amp; Luis</strong> · Wedding</footer></blockquote>
-      <blockquote class="quote"><div class="stars">★★★★★</div><p>Best decision for my daughter's quinceañera. The hora loca had everyone on their feet.</p><footer><strong>Familia Hernández</strong> · Quinceañera</footer></blockquote>
-      <blockquote class="quote"><div class="stars">★★★★★</div><p>Professional from the first call to the last song. Sound and lighting were flawless.</p><footer><strong>Jasmine R.</strong> · Sweet 16</footer></blockquote>
-      <blockquote class="quote"><div class="stars">★★★★★</div><p>They ran our company gala like a concert. Clean sound, zero stress, photos back the next morning.</p><footer><strong>D. Patel</strong> · Corporate</footer></blockquote>
+      <blockquote class="quote"><div class="stars">★★★★★</div><p data-i18n="s67">The dance floor was packed all night. The spark fountains during our first dance were unreal.</p><footer><strong>Maria &amp; Luis</strong> · Wedding</footer></blockquote>
+      <blockquote class="quote"><div class="stars">★★★★★</div><p data-i18n="s68">Best decision for my daughter's quinceañera. The hora loca had everyone on their feet.</p><footer><strong>Familia Hernández</strong> · Quinceañera</footer></blockquote>
+      <blockquote class="quote"><div class="stars">★★★★★</div><p data-i18n="s69">Professional from the first call to the last song. Sound and lighting were flawless.</p><footer><strong>Jasmine R.</strong> · Sweet 16</footer></blockquote>
+      <blockquote class="quote"><div class="stars">★★★★★</div><p data-i18n="s70">They ran our company gala like a concert. Clean sound, zero stress, photos back the next morning.</p><footer><strong>D. Patel</strong> · Corporate</footer></blockquote>
     </div>
     <div class="carousel__nav wrap wrap--wide">
       <button class="carousel__btn" data-prev aria-label="Previous">‹</button>
@@ -308,49 +313,95 @@
 <!-- ───────── EVENTS ───────── -->
 <section class="events" id="events">
   <div class="wrap">
-    <h2 class="h-section">Where we'll be.</h2>
+    <h2 class="h-section" data-i18n="s9">Where we'll be.</h2>
     <ul class="rows">
-      <li class="row"><span class="row__date">Oct 24</span><span class="row__name">Quinceañera de Valeria</span><span class="row__where">Marietta, GA</span><span class="row__tag">Booked</span></li>
-      <li class="row"><span class="row__date">Nov 07</span><span class="row__name">Reyes &amp; Sofía — Wedding</span><span class="row__where">Alpharetta, GA</span><span class="row__tag">Booked</span></li>
-      <li class="row"><span class="row__date">Nov 21</span><span class="row__name">Sweet 16 — Private estate</span><span class="row__where">Duluth, GA</span><span class="row__tag">Booked</span></li>
-      <li class="row"><span class="row__date">Dec 12</span><span class="row__name">Corporate holiday gala</span><span class="row__where">Downtown Atlanta</span><span class="row__tag">Booked</span></li>
-      <li class="row"><span class="row__date">Dec 31</span><span class="row__name">New Year's Eve — Private</span><span class="row__where">Buckhead</span><span class="row__tag row__tag--red">Limited</span></li>
-      <li class="row row--cta"><span class="row__date">2027</span><span class="row__name">Your date</span><span class="row__where">Anywhere you need us</span><a href="mailto:bookings@eclipseproductionsllc.com?subject=Date%20availability" class="link-arrow">Check availability</a></li>
+      <li class="row"><span class="row__date">Oct 24</span><span class="row__name" data-i18n="s127">Quinceañera de Valeria</span><span class="row__where" data-i18n="s128">Marietta, GA</span><span class="row__tag" data-i18n="s129">Booked</span></li>
+      <li class="row"><span class="row__date">Nov 07</span><span class="row__name" data-i18n="s130">Reyes &amp; Sofía — Wedding</span><span class="row__where" data-i18n="s131">Alpharetta, GA</span><span class="row__tag" data-i18n="s132">Booked</span></li>
+      <li class="row"><span class="row__date">Nov 21</span><span class="row__name" data-i18n="s133">Sweet 16 — Private estate</span><span class="row__where" data-i18n="s134">Duluth, GA</span><span class="row__tag" data-i18n="s135">Booked</span></li>
+      <li class="row"><span class="row__date">Dec 12</span><span class="row__name" data-i18n="s136">Corporate holiday gala</span><span class="row__where" data-i18n="s137">Downtown Atlanta</span><span class="row__tag" data-i18n="s138">Booked</span></li>
+      <li class="row"><span class="row__date">Dec 31</span><span class="row__name" data-i18n="s139">New Year's Eve — Private</span><span class="row__where" data-i18n="s140">Buckhead</span><span class="row__tag row__tag--red" data-i18n="s141">Limited</span></li>
+      <li class="row row--cta"><span class="row__date">2027</span><span class="row__name" data-i18n="s142">Your date</span><span class="row__where" data-i18n="s143">Anywhere you need us</span><a href="#contact" data-scroll="#contact" class="link-arrow" data-i18n="events.check">Check availability</a></li>
     </ul>
   </div>
 </section>
 
 <!-- ───────── CONTACT ───────── -->
 <section class="contact" id="contact">
-  <div class="wrap">
-    <h2 class="h-display">Let's plan<br />your night.</h2>
-    <div class="contact__grid">
-      <div><span class="eyebrow">Call or text</span><a href="tel:+17706887959" class="contact__big">(770) 688-7959</a></div>
-      <div><span class="eyebrow">Email</span><a href="mailto:bookings@eclipseproductionsllc.com" class="contact__big contact__big--sm">bookings@eclipseproductionsllc.com</a></div>
-      <div><span class="eyebrow">Based in</span><span class="contact__big">Atlanta, GA</span><span class="muted">Travel available</span></div>
-      <div><span class="eyebrow">Follow</span>
-        <div class="socials">
-          <a href="https://instagram.com/sonido_eclipse_" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://www.tiktok.com/@sonido_eclipse" target="_blank" rel="noopener">TikTok</a>
-          <a href="https://www.facebook.com/ECLIPSE.PRODUCTIONS.LLC" target="_blank" rel="noopener">Facebook</a>
-          <a href="https://www.youtube.com/@ECLIPSE_PRODUCTIONS_LLC" target="_blank" rel="noopener">YouTube</a>
+  <div class="wrap wrap--wide contact__grid2">
+    <div class="contact__intro">
+      <h2 class="h-display" data-i18n="contact.title">Let's plan<br />your night.</h2>
+      <p class="lede" data-i18n="contact.lede">Tell us the date, the venue and what you're picturing. We reply within 24 hours with availability and a quote.</p>
+      <div class="contact__grid">
+        <div><span class="eyebrow" data-i18n="contact.call">Call or text</span><a href="tel:+17706887959" class="contact__big">(770) 688-7959</a></div>
+        <div><span class="eyebrow" data-i18n="contact.email">Email</span><a href="mailto:bookings@eclipseproductionsllc.com" class="contact__big contact__big--sm" data-brand-email>bookings@eclipseproductionsllc.com</a></div>
+        <div><span class="eyebrow" data-i18n="contact.based">Based in</span><span class="contact__big">Atlanta, GA</span><span class="muted" data-i18n="contact.travel">Travel available</span></div>
+        <div><span class="eyebrow" data-i18n="contact.follow">Follow</span>
+          <div class="socials">
+            <a href="https://instagram.com/sonido_eclipse_" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.tiktok.com/@sonido_eclipse" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://www.facebook.com/ECLIPSE.PRODUCTIONS.LLC" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.youtube.com/@ECLIPSE_PRODUCTIONS_LLC" target="_blank" rel="noopener">YouTube</a>
+          </div>
         </div>
       </div>
     </div>
+
+    <form class="form" id="contact-form" action="https://formsubmit.co/ajax/bookings@eclipseproductionsllc.com" method="POST" novalidate>
+      <input type="hidden" name="_subject" value="New booking request from eclipseproductionsllc.com" data-form-subject />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="text" name="_honey" class="form__honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <div class="form__row">
+        <label class="field"><span data-i18n="form.name">Name</span><input type="text" name="name" required autocomplete="name" /></label>
+        <label class="field"><span data-i18n="form.phone">Phone</span><input type="tel" name="phone" required autocomplete="tel" /></label>
+      </div>
+      <div class="form__row">
+        <label class="field"><span data-i18n="form.email">Email</span><input type="email" name="email" required autocomplete="email" /></label>
+        <label class="field"><span data-i18n="form.date">Event date</span><input type="date" name="event_date" /></label>
+      </div>
+      <div class="form__row">
+        <label class="field"><span data-i18n="form.type">Event type</span>
+          <select name="event_type">
+            <option value="Wedding" data-i18n="form.t1">Wedding</option>
+            <option value="Quinceañera" data-i18n="form.t2">Quinceañera</option>
+            <option value="Sweet 16" data-i18n="form.t3">Sweet 16</option>
+            <option value="Corporate" data-i18n="form.t4">Corporate</option>
+            <option value="Private party" data-i18n="form.t5">Private party</option>
+            <option value="Other" data-i18n="form.t6">Other</option>
+          </select>
+        </label>
+        <label class="field"><span data-i18n="form.interest">Interested in</span>
+          <select name="interest" id="form-interest">
+            <option value="Not sure yet" data-i18n="form.i0">Not sure yet</option>
+            <option value="Bronze package" data-i18n="s99">Bronze</option>
+            <option value="Silver package" data-i18n="s100">Silver</option>
+            <option value="Gold package" data-i18n="s101">Gold</option>
+            <option value="Platinum package" data-i18n="s102">Platinum</option>
+            <option value="Eclipse Media" data-i18n="s103">Eclipse Media</option>
+            <option value="Custom" data-i18n="form.i6">Custom production</option>
+          </select>
+        </label>
+      </div>
+      <label class="field"><span data-i18n="form.msg">Tell us about the night</span><textarea name="message" rows="4" data-i18n-ph="form.msgph" placeholder="Venue, guest count, the moments that matter."></textarea></label>
+      <div class="form__foot">
+        <button type="submit" class="pill form__submit"><span data-i18n="form.send">Send request</span></button>
+        <p class="form__status" role="status" aria-live="polite"></p>
+      </div>
+    </form>
   </div>
 </section>
 </main>
 
 <footer class="footer">
   <div class="wrap">
-    <img class="footer__logo" src="/brand/EP_watermark_360w.png" width="180" height="51" alt="Eclipse Productions" loading="lazy" />
+    <img class="footer__logo" src="/brand/EP_watermark_360w.png" width="180" height="51" alt="Eclipse Productions" loading="lazy" data-brand-mark />
     <div class="footer__cols">
-      <div><h5>Services</h5><a href="#sound" data-scroll="#sound">Sound</a><a href="#lighting" data-scroll="#lighting">Lighting</a><a href="#fx" data-scroll="#fx">Special FX</a><a href="#clouds" data-scroll="#clouds">Signature moments</a><a href="#media" data-scroll="#media">Eclipse Media</a></div>
-      <div><h5>Events</h5><a href="#packages" data-scroll="#packages">Weddings</a><a href="#packages" data-scroll="#packages">Quinceañeras</a><a href="#packages" data-scroll="#packages">Sweet 16</a><a href="#packages" data-scroll="#packages">Corporate</a></div>
-      <div><h5>Company</h5><a href="#contact" data-scroll="#contact">Contact</a><a href="#reviews" data-scroll="#reviews">Reviews</a><a href="https://sonidoeclipsellc.com" target="_blank" rel="noopener">Sonido Eclipse ↗</a></div>
+      <div><h5 data-i18n="s39">Services</h5><a href="#sound" data-scroll="#sound" data-i18n="foot.sound">Sound</a><a href="#lighting" data-scroll="#lighting" data-i18n="foot.light">Lighting</a><a href="#fx" data-scroll="#fx" data-i18n="foot.fx">Special FX</a><a href="#clouds" data-scroll="#clouds" data-i18n="foot.moments">Signature moments</a><a href="#media" data-scroll="#media">Eclipse Media</a></div>
+      <div><h5 data-i18n="s40">Events</h5><a href="#packages" data-scroll="#packages" data-i18n="foot.wed">Weddings</a><a href="#packages" data-scroll="#packages" data-i18n="foot.xv">Quinceañeras</a><a href="#packages" data-scroll="#packages">Sweet 16</a><a href="#packages" data-scroll="#packages" data-i18n="foot.corp">Corporate</a></div>
+      <div><h5 data-i18n="s41">Company</h5><a href="#contact" data-scroll="#contact" data-i18n="foot.contact">Contact</a><a href="#reviews" data-scroll="#reviews" data-i18n="foot.reviews">Reviews</a><a href="https://sonidoeclipsellc.com" target="_blank" rel="noopener" data-brand-sister>Sonido Eclipse ↗</a></div>
     </div>
     <div class="footer__legal">
-      <span>Copyright © <span data-year>2026</span> Eclipse Productions LLC. All rights reserved.</span>
+      <span data-i18n="foot.legal">Copyright © 2026 Eclipse Productions LLC. All rights reserved.</span>
       <span>Atlanta, GA · (770) 688-7959</span>
     </div>
   </div>
