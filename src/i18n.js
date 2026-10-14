@@ -7,7 +7,7 @@
 
 export const ES = {
   // nav
-  "nav.book": "Reservar",
+  "nav.book": "Reservar", "work.nav": "Nuestro trabajo",
   s144: "Novedades", s145: "Servicios", s146: "Media", s147: "Paquetes", s148: "Eventos", s149: "Reseñas", s150: "Contacto",
   s151: "Novedades", s152: "Servicios", s153: "Media", s154: "Paquetes", s155: "Eventos", s156: "Reseñas", s157: "Contacto",
   // hero
@@ -115,7 +115,7 @@ export const BRANDS = {
   eclipse: {
     name: "Eclipse Productions",
     legal: "Eclipse Productions LLC",
-    email: "bookings@eclipseproductionsllc.com",
+    email: "eclipse.sound.lightning@gmail.com", // until the Workspace inbox exists
     formTo: "f2e098bb44eb2eb443b590fe6b9383de", // FormSubmit alias for the business Gmail (keeps the address out of the page source)
     domain: "eclipseproductionsllc.com",
     logo: "/brand/EP_logo_chrome_transparent_tight.png",
@@ -127,7 +127,7 @@ export const BRANDS = {
   sonido: {
     name: "Sonido Eclipse",
     legal: "Sonido Eclipse LLC",
-    email: "bookings@sonidoeclipsellc.com",
+    email: "eclipse.sound.lightning@gmail.com",
     formTo: "f2e098bb44eb2eb443b590fe6b9383de",
     domain: "sonidoeclipsellc.com",
     logo: "/brand/SE_logo_chrome_transparent_tight.png",
