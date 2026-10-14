@@ -116,7 +116,7 @@ export const BRANDS = {
     name: "Eclipse Productions",
     legal: "Eclipse Productions LLC",
     email: "bookings@eclipseproductionsllc.com",
-    formTo: "ivansito87@gmail.com", // inbox that actually receives mail (the domains have no MX records yet)
+    formTo: "eclipse.sound.lightning@gmail.com", // inbox that actually receives mail (the domains have no MX records yet)
     domain: "eclipseproductionsllc.com",
     logo: "/brand/EP_logo_chrome_transparent_tight.png",
     mark: "/brand/EP_watermark_360w.png",
@@ -128,7 +128,7 @@ export const BRANDS = {
     name: "Sonido Eclipse",
     legal: "Sonido Eclipse LLC",
     email: "bookings@sonidoeclipsellc.com",
-    formTo: "ivansito87@gmail.com",
+    formTo: "eclipse.sound.lightning@gmail.com",
     domain: "sonidoeclipsellc.com",
     logo: "/brand/SE_logo_chrome_transparent_tight.png",
     mark: "/brand/SE_watermark_360w.png",
