@@ -1,0 +1,133 @@
+[
+ {
+  "title": "La Amistad Gala — 25th anniversary",
+  "type": "Corporate",
+  "city": "Atlanta, GA",
+  "did": "Full production · projectors · sound · DJ · uplighting · podium stage · hora loca character",
+  "shape": "tall",
+  "poster": "/reels/la-amistad-gala.webp",
+  "video": "/reels/la-amistad-gala.mp4",
+  "url": "https://www.instagram.com/reel/Dd2Wyy4zba1/"
+ },
+ {
+  "title": "The ultimate crowd pleaser has entered the chat! 🖤👑✨",
+  "type": "Quinceañera",
+  "city": "Douglasville, GA",
+  "did": "Kuromi giant character · LED screen · custom visuals · beams · washes · sparks",
+  "shape": "tall",
+  "poster": "/reels/kuromi-hora-loca.webp",
+  "video": "/reels/kuromi-hora-loca.mp4",
+  "url": "https://www.instagram.com/reel/DePPkspTkq5/"
+ },
+ {
+  "title": "Jocell's XV — Steal the show",
+  "type": "Quinceañera",
+  "city": "Atlanta, GA",
+  "did": "Vals · cold sparks · LED dance floor",
+  "shape": "tall",
+  "poster": "/reels/jocell-steal-the-show.webp",
+  "video": "/reels/jocell-steal-the-show.mp4",
+  "url": "https://www.instagram.com/reel/DeckoAbTkAW/"
+ },
+ {
+  "title": "Jocell's XV — Baile sorpresa",
+  "type": "Quinceañera",
+  "city": "Atlanta, GA",
+  "did": "Cold sparks · LED dance floor · LED screen · beams · haze",
+  "shape": "wide",
+  "poster": "/reels/jocell-baile-sorpresa.webp",
+  "url": "https://www.instagram.com/reel/DeenqCsTlBu/",
+  "ratio": "16:9",
+  "video": "/reels/jocell-baile-sorpresa.mp4"
+ },
+ {
+  "title": "Jocelyn's XV",
+  "type": "Quinceañera",
+  "city": "Marietta, GA",
+  "did": "Vals · clouds · cold sparks",
+  "shape": "tall",
+  "poster": "quince-vals",
+  "url": ""
+ },
+ {
+  "title": "Maria & Adrian",
+  "type": "Wedding",
+  "city": "Alpharetta, GA",
+  "did": "First dance on the clouds",
+  "shape": "wide",
+  "poster": "clouds-full",
+  "url": ""
+ },
+ {
+  "title": "Hora Loca · Valeria",
+  "type": "Quinceañera",
+  "city": "Duluth, GA",
+  "did": "LED robot · confetti",
+  "shape": "tall",
+  "poster": "hora-loca",
+  "url": ""
+ },
+ {
+  "title": "Camila's Sweet 16",
+  "type": "Sweet 16",
+  "city": "Lawrenceville, GA",
+  "did": "Neon · LED floor · 360 booth",
+  "shape": "square",
+  "poster": "sweet16",
+  "url": ""
+ },
+ {
+  "title": "Grand entrance",
+  "type": "Wedding",
+  "city": "Atlanta, GA",
+  "did": "Cold-spark fountains",
+  "shape": "square",
+  "poster": "sparks-on",
+  "url": ""
+ },
+ {
+  "title": "Winter gala",
+  "type": "Corporate",
+  "city": "Downtown Atlanta",
+  "did": "LED wall · line array",
+  "shape": "wide",
+  "poster": "corporate-gala",
+  "url": ""
+ },
+ {
+  "title": "360 booth night",
+  "type": "Sweet 16",
+  "city": "Roswell, GA",
+  "did": "360 video booth",
+  "shape": "square",
+  "poster": "360-booth",
+  "url": ""
+ },
+ {
+  "title": "Infinity floor",
+  "type": "Wedding",
+  "city": "Buckhead",
+  "did": "LED dance floor",
+  "shape": "wide",
+  "poster": "led-dance-floor",
+  "url": ""
+ },
+ {
+  "title": "Packed floor",
+  "type": "Private party",
+  "city": "Smyrna, GA",
+  "did": "Beams · confetti · haze",
+  "shape": "big",
+  "poster": "crowd-hands",
+  "url": ""
+ },
+ {
+  "title": "Uplit ballroom",
+  "type": "Wedding",
+  "city": "Sandy Springs, GA",
+  "did": "Perimeter uplighting",
+  "shape": "tall",
+  "poster": "uplighting-ballroom",
+  "url": ""
+ }
+]

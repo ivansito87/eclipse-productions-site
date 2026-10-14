@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Our Work — Eclipse Productions</title>
+  <meta name="description" content="Real nights produced by Eclipse Productions: weddings, quinceañeras, sweet 16s and corporate events across Atlanta." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" href="/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="stylesheet" href="/src/work.css" />
+</head>
+<body class="work-page">
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo" aria-label="Eclipse Productions"><img src="/brand/EP_watermark_360w.png" width="360" height="101" alt="Eclipse Productions" data-brand-mark /></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="/#services" data-i18n="s145">Services</a>
+      <a href="/#packages" data-i18n="s147">Packages</a>
+      <a href="/work/" class="is-current" data-i18n="work.nav">Our work</a>
+      <a href="/#contact" data-i18n="s150">Contact</a>
+    </nav>
+    <div class="nav__right">
+      <button type="button" class="nav__lang" data-lang-toggle aria-label="Cambiar a español">ES</button>
+      <a href="tel:+17706887959" class="nav__phone">(770) 688-7959</a>
+      <a href="/#contact" class="pill pill--sm" data-i18n="nav.book">Book</a>
+    </div>
+  </div>
+</header>
+
+<main class="work">
+  <div class="wrap wrap--wide work__head">
+    <h1 class="h-display" data-i18n="work.title">Our work.</h1>
+    <p class="lede" data-i18n="work.lede">Real nights, real rooms. Tap any tile to watch it here.</p>
+    <div class="chips" role="tablist">
+      <button class="chip is-on" data-filter="all" data-i18n="work.all">All</button>
+      <button class="chip" data-filter="Wedding" data-i18n="s30">Weddings</button>
+      <button class="chip" data-filter="Quinceañera" data-i18n="s31">Quinceañeras</button>
+      <button class="chip" data-filter="Sweet 16" data-i18n="s32">Sweet 16</button>
+      <button class="chip" data-filter="Corporate" data-i18n="s33">Corporate</button>
+      <button class="chip" data-filter="Private party" data-i18n="s34">Private parties</button>
+    </div>
+  </div>
+
+  <div class="wrap wrap--wide">
+    <div class="mosaic" id="mosaic" aria-live="polite"></div>
+  </div>
+
+  <div class="wrap wrap--wide work__foot">
+    <p class="muted" data-i18n="work.more">More every week on</p>
+    <div class="socials">
+      <a href="https://instagram.com/sonido_eclipse_" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@sonido_eclipse" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.youtube.com/@ECLIPSE_PRODUCTIONS_LLC" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
+</main>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox__backdrop" data-close></div>
+  <div class="lightbox__card" role="dialog" aria-modal="true">
+    <button class="lightbox__close" data-close aria-label="Close">×</button>
+    <div class="lightbox__media" id="lightbox-media"></div>
+    <div class="lightbox__meta">
+      <h2 class="lightbox__title" id="lightbox-title"></h2>
+      <p class="lightbox__sub" id="lightbox-sub"></p>
+      <a class="link-arrow" id="lightbox-link" target="_blank" rel="noopener" data-i18n="work.open">Open on Instagram</a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__legal">
+      <span data-i18n="foot.legal">Copyright © 2026 Eclipse Productions LLC. All rights reserved.</span>
+      <span>Atlanta, GA · (770) 688-7959</span>
+    </div>
+  </div>
+</footer>
+<script type="module" src="/src/work.js"></script>
+</body>
+</html>
