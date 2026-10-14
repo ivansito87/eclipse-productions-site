@@ -51,8 +51,8 @@ button { font: inherit; }
 .muted { color: var(--gray); }
 .red { color: var(--red); }
 /* metallic red text: used by every red accent on the site */
-.eyebrow--red, .red, .link-arrow, .tile--text .big, .chapter__copy .eyebrow, .stars, .plan li::before, .form__status.is-err,
-.row--cta .row__name, .row__tag--red {
+.eyebrow--red, .red, .link-arrow, .tile--text .big, .stars, .plan li::before, .form__status.is-err,
+.row--cta .row__name, .row__tag--red, .rail__i.is-active .rail__t {
   background: var(--red-metal-text);
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: transparent;
@@ -220,16 +220,40 @@ button { font: inherit; }
 }
 /* `translate` is a separate CSS property, so GSAP's transform (y/opacity) composes with it */
 .chapter__copy--left { left: max(var(--gutter), (100% - var(--wrap-wide)) / 2); right: auto; margin: 0; bottom: auto; top: 50%; translate: 0 -50%; text-align: left; }
-.chapter__copy .eyebrow {
-  display: block; margin: 0 0 6px;
-  font-size: clamp(56px, 8.2vw, 124px); line-height: 0.95; font-weight: 800; letter-spacing: -0.035em;
-  padding-right: 0.06em;
+.chapter__copy { width: min(640px, 100% - var(--gutter) * 2); }
+.chapter__copy--left { width: min(640px, 100% - var(--gutter) * 2); }
+/* readability scrim: lives with the copy so it fades with it */
+.chapter__copy::before {
+  content: ""; position: absolute; z-index: -1; inset: -20% -40% -30% -40%;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0) 72%);
+  pointer-events: none;
 }
-.chapter__copy h3 { font-size: clamp(26px, 3.4vw, 44px); line-height: 1.08; letter-spacing: -0.01em; font-weight: 600; color: #f5f5f7; }
-.chapter__copy p { font-size: clamp(16px, 1.4vw, 19px); line-height: 1.45; color: rgba(245,245,247,0.78); margin-top: 14px; max-width: 46ch; }
-.chapter__copy--left p { max-width: 42ch; }
-.chapter__copy { width: min(760px, 100% - var(--gutter) * 2); }
-.chapter__copy--left { width: min(900px, 100% - var(--gutter) * 2); }
+.chapter__copy--left::before { inset: -30% -60% -40% -45%; background: radial-gradient(ellipse at 35% 50%, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0) 72%); }
+.chapter__copy h3 {
+  position: relative; padding-top: 18px;
+  font-size: clamp(48px, 6.4vw, 92px); line-height: 1; letter-spacing: -0.025em; font-weight: 700; color: #fff;
+}
+.chapter__copy h3::before { content: ""; position: absolute; top: 0; width: 44px; height: 3px; border-radius: 2px; background: var(--red-metal); }
+.chapter__copy:not(.chapter__copy--left) h3::before { left: 50%; transform: translateX(-50%); }
+.chapter__copy--left h3::before { left: 0; }
+.chapter__lead { font-size: clamp(20px, 2vw, 26px); line-height: 1.25; letter-spacing: -0.01em; font-weight: 500; color: rgba(255,255,255,0.92); margin-top: 16px; }
+.chapter__copy p:not(.chapter__lead) { font-size: clamp(16px, 1.3vw, 18px); line-height: 1.45; color: rgba(245,245,247,0.72); margin-top: 12px; max-width: 46ch; }
+.chapter__copy:not(.chapter__copy--left) p { margin-inline: auto; }
+
+/* chapter rail: persistent wayfinding while inside the chapters */
+.rail {
+  position: fixed; right: var(--gutter); top: 50%; transform: translateY(-50%); z-index: 20;
+  display: flex; flex-direction: column; gap: 14px;
+  opacity: 0; pointer-events: none; transition: opacity 0.4s var(--ease);
+}
+.rail.is-on { opacity: 1; pointer-events: auto; }
+.rail__i { display: flex; align-items: center; gap: 10px; font-size: 12px; letter-spacing: 0.02em; color: rgba(255,255,255,0.45); transition: color 0.3s; }
+.rail__i:hover { color: rgba(255,255,255,0.85); }
+.rail__n { font-variant-numeric: tabular-nums; width: 18px; }
+.rail__i::before { content: ""; width: 14px; height: 1px; background: currentColor; opacity: 0.5; transition: width 0.3s var(--ease), opacity 0.3s; }
+.rail__i.is-active { color: #fff; }
+.rail__i.is-active::before { width: 28px; opacity: 1; background: var(--red-metal); }
+.rail__i.is-active .rail__t { font-weight: 600; }
 
 /* ─── bento ─── */
 .bento-sec { background: var(--snow); padding: clamp(72px, 10vw, 140px) 0; }
@@ -368,7 +392,7 @@ button { font: inherit; }
   .contact__grid { grid-template-columns: 1fr; }
   .form__row { grid-template-columns: 1fr; }
   .chapter { height: 260vh; }
-  .chapter__copy .eyebrow { font-size: clamp(48px, 16vw, 72px); }
+  .rail { display: none; }
   .chapter__copy, .chapter__copy--left { left: 0; right: 0; margin-inline: auto; top: auto; bottom: 8vh; translate: none; text-align: center; width: calc(100% - var(--gutter) * 2); }
 }
 @media (prefers-reduced-motion: reduce) {

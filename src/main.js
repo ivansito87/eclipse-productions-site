@@ -322,15 +322,27 @@ class Chapter {
 
 const chapters = $$("[data-chapter]").map((el) => new Chapter(el));
 
+const rail = $(".rail");
+const railItems = $$(".rail__i");
+const setRail = (i) => railItems.forEach((el, k) => el.classList.toggle("is-active", k === i));
+ScrollTrigger.create({
+  trigger: ".chapters",
+  start: "top 40%",
+  end: "bottom 60%",
+  onToggle: (st) => rail.classList.toggle("is-on", st.isActive),
+});
+
 if (!reduced) {
-  chapters.forEach((ch) => {
+  chapters.forEach((ch, i) => {
     ScrollTrigger.create({
       trigger: ch.el,
       start: "top top",
       end: "bottom bottom",
       scrub: true,
       onUpdate: (st) => { ch.progress = st.progress; ch.render(); },
+      onToggle: (st) => { if (st.isActive) setRail(i); },
     });
+    ScrollTrigger.create({ trigger: ch.el, start: "top 60%", end: "bottom 60%", onToggle: (st) => { if (st.isActive) setRail(i); } });
     // copy choreography: rise in, hold, drift out
     gsap
       .timeline({ scrollTrigger: { trigger: ch.el, start: "top top", end: "bottom bottom", scrub: 0.5 }, defaults: { ease: "none" } })
