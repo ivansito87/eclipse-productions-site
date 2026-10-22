@@ -115,8 +115,8 @@ export const BRANDS = {
   eclipse: {
     name: "Eclipse Productions",
     legal: "Eclipse Productions LLC",
-    email: "eclipse.sound.lightning@gmail.com", // until the Workspace inbox exists
-    formTo: "f2e098bb44eb2eb443b590fe6b9383de", // FormSubmit alias for the business Gmail (keeps the address out of the page source)
+    email: "info@eclipseproductionsllc.com", // until the Workspace inbox exists
+    formTo: "info@eclipseproductionsllc.com", // replace with the FormSubmit alias once the activation email for this inbox is clicked
     domain: "eclipseproductionsllc.com",
     logo: "/brand/EP_logo_chrome_transparent_tight.png",
     mark: "/brand/EP_watermark_360w.png",
@@ -128,8 +128,8 @@ export const BRANDS = {
   sonido: {
     name: "Sonido Eclipse",
     legal: "Sonido Eclipse LLC",
-    email: "eclipse.sound.lightning@gmail.com",
-    formTo: "f2e098bb44eb2eb443b590fe6b9383de",
+    email: "info@eclipseproductionsllc.com",
+    formTo: "info@eclipseproductionsllc.com",
     domain: "sonidoeclipsellc.com",
     logo: "/brand/SE_logo_chrome_transparent_tight.png",
     mark: "/brand/SE_watermark_360w.png",
