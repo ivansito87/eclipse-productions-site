@@ -349,7 +349,7 @@ button { font: inherit; }
 
 /* ─── footer ─── */
 .footer { background: var(--snow); color: var(--gray); font-size: 12px; padding: 40px 0 28px; }
-.footer__logo { width: 150px; height: auto; margin-bottom: 28px; }
+.footer__logo { width: 170px; height: auto; margin-bottom: 28px; }
 .footer__cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--gray-2); }
 .footer__cols h5 { color: var(--ink); font-size: 12px; font-weight: 600; margin-bottom: 8px; }
 .footer__cols a { display: block; padding: 4px 0; }

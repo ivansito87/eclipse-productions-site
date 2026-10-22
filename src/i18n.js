@@ -120,6 +120,7 @@ export const BRANDS = {
     domain: "eclipseproductionsllc.com",
     logo: "/brand/EP_logo_chrome_transparent_tight.png",
     mark: "/brand/EP_watermark_360w.png",
+    markDark: "/brand/EP_watermark_black_360w.png", // for light surfaces (footer)
     og: "/og.jpg",
     sister: { name: "Sonido Eclipse", url: "https://sonidoeclipsellc.com" },
     lang: "en",
@@ -132,6 +133,7 @@ export const BRANDS = {
     domain: "sonidoeclipsellc.com",
     logo: "/brand/SE_logo_chrome_transparent_tight.png",
     mark: "/brand/SE_watermark_360w.png",
+    markDark: "/brand/SE_watermark_black_360w.png",
     og: "/og-sonido.jpg",
     sister: { name: "Eclipse Productions", url: "https://eclipseproductionsllc.com" },
     lang: "es",
@@ -181,6 +183,7 @@ export function applyBrand() {
   document.documentElement.dataset.brand = brandId;
   document.querySelectorAll("[data-brand-logo]").forEach((img) => { img.src = brand.logo; img.alt = brand.name; });
   document.querySelectorAll("[data-brand-mark]").forEach((img) => { img.src = brand.mark; img.alt = brand.name; });
+  document.querySelectorAll("[data-brand-mark-dark]").forEach((img) => { img.src = brand.markDark; img.alt = brand.name; });
   document.querySelectorAll("[data-brand-name]").forEach((el) => (el.textContent = brand.name));
   document.querySelectorAll("[data-brand-email]").forEach((a) => { a.textContent = brand.email; a.href = `mailto:${brand.email}`; });
   document.querySelectorAll("[data-brand-sister]").forEach((a) => { a.textContent = `${brand.sister.name} ↗`; a.href = brand.sister.url; });
