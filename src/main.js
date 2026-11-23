@@ -398,24 +398,21 @@ if (!reduced) {
     btn.disabled = true;
     status.className = "form__status";
     status.textContent = t("form.sending");
-    try {
-      const res = await fetch(form.action, {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: new FormData(form),
-      });
+    // FormSubmit can take 30–100 s to answer; keepalive lets the request finish even if the
+    // visitor leaves, and after a short grace we show the thank-you and confirm in the background.
+    const req = (async () => {
+      const res = await fetch(form.action, { method: "POST", headers: { Accept: "application/json" }, body: new FormData(form), keepalive: true });
       const data = await res.json().catch(() => ({}));
       if (/activat/i.test(data.message || "")) throw new Error("activation");
       if (!res.ok || data.success === "false" || data.success === false) throw new Error(data.message || res.statusText);
-      status.classList.add("is-ok");
-      status.textContent = t("form.ok");
-      form.reset();
-    } catch (err) {
-      status.classList.add("is-err");
-      status.textContent = err.message === "activation" ? t("form.activate") : t("form.err");
-    } finally {
-      btn.disabled = false;
-    }
+    })();
+    const ok = () => { status.className = "form__status is-ok"; status.textContent = t("form.ok"); form.reset(); };
+    const fail = (err) => { status.className = "form__status is-err"; status.textContent = err?.message === "activation" ? t("form.activate") : t("form.err"); };
+    const outcome = await Promise.race([req.then(() => "ok", (err) => err), new Promise((r) => setTimeout(() => r("slow"), 2500))]);
+    btn.disabled = false;
+    if (outcome === "ok") ok();
+    else if (outcome !== "slow") fail(outcome);
+    else { ok(); req.catch(fail); }
   });
 }
 

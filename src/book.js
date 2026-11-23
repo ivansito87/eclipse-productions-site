@@ -20,10 +20,12 @@ Object.assign(ES, {
   "book.back": "Atrás", "book.next": "Siguiente", "book.skip": "Omitir", "book.send": "Pedir cotización", "book.home": "Sitio completo",
   "book.stepOf": "Paso {n} de {total}", "book.done": "Enviado", "book.pick": "Elige un tipo de evento para continuar.",
   "book.thanksName": "¡Listo, {name}!", "book.title": "Pide tu cotización",
+  "book.bg": "Enviando en segundo plano…", "book.sent": "Enviado. Ya lo tenemos.",
 });
 Object.assign(EN_EXTRA, {
   "book.stepOf": "Step {n} of {total}", "book.done": "Sent", "book.pick": "Pick an event type to continue.",
   "book.thanksName": "Got it, {name}.", "book.title": "Get a quote", "book.send": "Get my quote", "book.next": "Next", "book.skip": "Skip",
+  "book.bg": "Sending in the background…", "book.sent": "Sent. We have it.",
 });
 
 initI18n();
@@ -134,7 +136,22 @@ form.addEventListener("change", (e) => {
 });
 form.addEventListener("input", saveDraft);
 
-/* ── submit: same FormSubmit inbox as the home-page form, richer subject ── */
+/* ── submit: same FormSubmit inbox as the home-page form, richer subject.
+   FormSubmit can take 30–100 s to answer, so the request goes out with keepalive and
+   the thank-you screen shows after a short grace; the note on it confirms or flags. ── */
+const GRACE = 2500;
+const doneNote = $("#bk-done-note");
+async function postLead(fd) {
+  const res = await fetch(form.action, { method: "POST", headers: { Accept: "application/json" }, body: fd, keepalive: true });
+  const data = await res.json().catch(() => ({}));
+  if (/activat/i.test(data.message || "")) throw new Error("activation");
+  if (!res.ok || data.success === "false" || data.success === false) throw new Error(data.message || res.statusText);
+}
+function showDone(fd) {
+  const name = (fd.get("name") || "").trim().split(/\s+/)[0];
+  $("#bk-thanks").textContent = name ? t("book.thanksName").replace("{name}", name) : t("book.thanks");
+  step = STEPS + 1; show(step, 1);
+}
 async function submit() {
   next.disabled = true;
   status.className = "form__status bk-status"; status.textContent = t("form.sending");
@@ -144,19 +161,20 @@ async function submit() {
   fd.set("_subject", `New quote via ${src}${ref ? ` (${ref})` : ""}: ${fd.get("event_type")} · ${fd.get("name")} — ${brand.domain}`);
   if (fd.get("email")) fd.set("_replyto", fd.get("email")); else fd.delete("_replyto");
   if (!ref) fd.delete("ref");
-  try {
-    const res = await fetch(form.action, { method: "POST", headers: { Accept: "application/json" }, body: fd });
-    const data = await res.json().catch(() => ({}));
-    if (/activat/i.test(data.message || "")) throw new Error("activation");
-    if (!res.ok || data.success === "false" || data.success === false) throw new Error(data.message || res.statusText);
-    const name = (fd.get("name") || "").trim().split(/\s+/)[0];
-    $("#bk-thanks").textContent = name ? t("book.thanksName").replace("{name}", name) : t("book.thanks");
-    try { localStorage.removeItem(DRAFT); } catch {}
-    step = STEPS + 1; show(step, 1);
-  } catch (err) {
-    status.classList.add("is-err");
-    status.textContent = err.message === "activation" ? t("form.activate") : t("form.err");
-  } finally { next.disabled = false; }
+  const req = postLead(fd);
+  const outcome = await Promise.race([req.then(() => "ok", (e) => e), new Promise((r) => setTimeout(() => r("slow"), GRACE))]);
+  next.disabled = false;
+  const fail = (err) => {
+    const msg = err?.message === "activation" ? t("form.activate") : t("form.err");
+    if (step > STEPS) { doneNote.className = "bk-done__note is-err"; doneNote.textContent = msg; }
+    else { status.classList.add("is-err"); status.textContent = msg; }
+  };
+  const ok = () => { try { localStorage.removeItem(DRAFT); } catch {} doneNote.className = "bk-done__note is-ok"; doneNote.textContent = t("book.sent"); };
+  if (outcome === "ok") { showDone(fd); ok(); return; }
+  if (outcome !== "slow") { fail(outcome); return; }
+  showDone(fd); // optimistic: the request keeps going in the background (keepalive survives a closed tab)
+  doneNote.className = "bk-done__note"; doneNote.textContent = t("book.bg");
+  req.then(ok, fail);
 }
 
 /* ── language toggle re-renders the dynamic bits ── */
