@@ -76,7 +76,7 @@ function open(it) {
   $("#lightbox-sub").textContent = `${t(typeKey[it.type] || "") || it.type} · ${it.city} · ${it.did}`;
   const link = $("#lightbox-link");
   link.textContent = t("work.open").replace("{platform}", e ? e.platform : "Instagram");
-  link.href = it.url || "https://instagram.com/sonido_eclipse_";
+  link.href = it.url || "https://www.instagram.com/eclipseproductionsllc/";
   box.classList.add("is-open");
   box.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";

@@ -122,6 +122,7 @@ export const BRANDS = {
     mark: "/brand/EP_watermark_360w.png",
     markDark: "/brand/EP_watermark_black_360w.png", // for light surfaces (footer)
     og: "/og.jpg",
+    facebook: "https://www.facebook.com/eclipseproductionsatl",
     sister: { name: "Sonido Eclipse", url: "https://sonidoeclipsellc.com" },
     lang: "en",
   },
@@ -135,6 +136,7 @@ export const BRANDS = {
     mark: "/brand/SE_watermark_360w.png",
     markDark: "/brand/SE_watermark_black_360w.png",
     og: "/og-sonido.jpg",
+    facebook: "https://www.facebook.com/sonidoeclipsellc",
     sister: { name: "Eclipse Productions", url: "https://eclipseproductionsllc.com" },
     lang: "es",
   },
@@ -186,6 +188,7 @@ export function applyBrand() {
   document.querySelectorAll("[data-brand-mark-dark]").forEach((img) => { img.src = brand.markDark; img.alt = brand.name; });
   document.querySelectorAll("[data-brand-name]").forEach((el) => (el.textContent = brand.name));
   document.querySelectorAll("[data-brand-email]").forEach((a) => { a.textContent = brand.email; a.href = `mailto:${brand.email}`; });
+  document.querySelectorAll("[data-brand-facebook]").forEach((a) => { if (brand.facebook) a.href = brand.facebook; });
   document.querySelectorAll("[data-brand-sister]").forEach((a) => { a.textContent = `${brand.sister.name} ↗`; a.href = brand.sister.url; });
   const form = document.querySelector("#contact-form");
   if (form) {
