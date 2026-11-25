@@ -21,11 +21,14 @@ Object.assign(ES, {
   "book.stepOf": "Paso {n} de {total}", "book.done": "Enviado", "book.pick": "Elige un tipo de evento para continuar.",
   "book.thanksName": "¡Listo, {name}!", "book.title": "Pide tu cotización",
   "book.bg": "Enviando en segundo plano…", "book.sent": "Enviado. Ya lo tenemos.",
+  "book.whatsapp": "Escríbenos por WhatsApp", "book.copy": "Copiar", "book.copied": "Copiado", "book.inapphint": "Para llamar o mandar texto con un toque, abre esta página en tu navegador: toca el menú <b>•••</b> arriba y luego <b>Abrir en el navegador</b>.",
+  "book.wamsg": "Hola, acabo de enviar una solicitud de cotización en su sitio. Soy {name}.",
 });
 Object.assign(EN_EXTRA, {
   "book.stepOf": "Step {n} of {total}", "book.done": "Sent", "book.pick": "Pick an event type to continue.",
   "book.thanksName": "Got it, {name}.", "book.title": "Get a quote", "book.send": "Get my quote", "book.next": "Next", "book.skip": "Skip",
   "book.bg": "Sending in the background…", "book.sent": "Sent. We have it.",
+  "book.copied": "Copied", "book.wamsg": "Hi, I just sent a quote request on your site. This is {name}.",
 });
 
 initI18n();
@@ -47,6 +50,18 @@ function setTitles() {
   const ogt = $('meta[property="og:title"]'); if (ogt) ogt.content = document.title;
   $("#bk-lang").value = document.documentElement.lang;
 }
+
+/* ── in-app browsers (Instagram, Facebook, TikTok) block tel:/sms: links ── */
+const inApp = /Instagram|FBAN|FBAV|FB_IAB|musical_ly|Bytedance|TikTok/i.test(navigator.userAgent);
+document.documentElement.classList.toggle("in-app", inApp);
+const PHONE = "7706887959";
+$("#bk-copy")?.addEventListener("click", async (e) => {
+  const b = e.currentTarget;
+  let done = false;
+  try { await navigator.clipboard.writeText(PHONE); done = true; } catch {}
+  if (!done) { const r = document.createRange(); r.selectNodeContents(b.firstElementChild); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); try { done = document.execCommand("copy"); } catch {} }
+  if (done) { b.classList.add("is-copied"); b.querySelector("em").textContent = t("book.copied"); }
+});
 
 /* ── where did this lead come from? ── */
 function detectSource() {
@@ -150,6 +165,7 @@ async function postLead(fd) {
 function showDone(fd) {
   const name = (fd.get("name") || "").trim().split(/\s+/)[0];
   $("#bk-thanks").textContent = name ? t("book.thanksName").replace("{name}", name) : t("book.thanks");
+  const wa = $("#bk-wa"); if (wa) wa.href = `https://wa.me/1${PHONE}?text=${encodeURIComponent(t("book.wamsg").replace("{name}", (fd.get("name") || "").trim()))}`;
   step = STEPS + 1; show(step, 1);
 }
 async function submit() {

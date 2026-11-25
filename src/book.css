@@ -105,3 +105,13 @@
   .bk-tile span { font-size: 15px; }
   .bk-next { min-width: 120px; }
 }
+
+/* Instagram / Facebook / TikTok in-app browsers block tel: and sms: ("Action can't be completed"),
+   so inside them the done screen offers WhatsApp (https) and a copyable number instead. */
+.bk-inapp-only { display: none; }
+html.in-app .bk-inapp-only { display: flex; }
+html.in-app .bk-browser-only { display: none; }
+#bk-copy em { font-style: normal; font-weight: 500; opacity: 0.55; margin-left: 6px; }
+#bk-copy.is-copied em { opacity: 1; color: #15803d; }
+.bk-done__hint { font-size: 13px; line-height: 1.45; color: rgba(255,255,255,0.5); margin-top: 6px; }
+.bk-done__hint b { color: rgba(255,255,255,0.85); font-weight: 600; }
